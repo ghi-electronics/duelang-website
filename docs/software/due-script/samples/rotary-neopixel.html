@@ -10,7 +10,7 @@
       <meta name="title" content="Rotary NeoPixel ">
     
       <link rel="shortcut icon" href="../../../images/favicon.ico">
-      <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+      <link rel="stylesheet" href="../../../styles/docfx.vendor.min.css">
       <link rel="stylesheet" href="../../../styles/docfx.css">
       <link rel="stylesheet" href="../../../styles/main.css">
       <meta property="docfx:navrel" content="../../../toc.html">
@@ -79,19 +79,16 @@
 <h1 id="rotary-neopixel">Rotary NeoPixel</h1>
 
 <hr>
-<p>This sample uses a Grove rotary module to control NeoPixel Ring</p>
+<p>This sample uses a Grove rotary module to control NeoPixel Ring. This sample use <a href="../corelib/analog.html">Analog</a> &amp; <a href="../corelib/neopixel.html">Neopixel</a>.</p>
 <p><img src="images/rotary-neopixel.gif" alt="Rotary Module"></p>
-<p>Hardware:</p>
+<p><strong>Hardware:</strong></p>
 <ul>
 <li>FEZ Flea</li>
 <li>Grove XIAO Shield</li>
 <li>Grove Rotary Angle Sensor</li>
 <li>NeoPixel Ring</li>
 </ul>
-<div class="NOTE">
-<h5>Note</h5>
-<p>The Rotary module can be attached to any analog pins. The NeoPixel can only be attached to a certain pin. See specific hardware page for details.</p>
-</div>
+<p><strong>Software:</strong></p>
 <pre><code class="lang-basic">@loop
 NeoClear()
 NeoShow(24)
@@ -136,7 +133,7 @@ goto loop
       </footer>
     </div>
 
-    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.vendor.min.js"></script>
     <script type="text/javascript" src="../../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../../styles/main.js"></script>
   </body>

@@ -19,16 +19,20 @@
 ### [I2C](due-script/corelib/i2c.md)
 ### [Infrared](due-script/corelib/infrared.md)
 ### [LCD](due-script/corelib/lcd.md)
+### [LED](due-script/corelib/led.md)
 ### [NeoPixel](due-script/corelib/neopixel.md)
 ### [Servo](due-script/corelib/servo.md)
-### [Sound](due-script/corelib/servo.md)
+### [Sound](due-script/corelib/sound.md)
 ### [SPI](due-script/corelib/spi.md)
 ### [System Functions](due-script/corelib/systemfunctions.md)
 ### [Touch](due-script/corelib/touch.md)
 ### [UART](due-script/corelib/uart.md)
 
 ## [Samples](due-script/samples/samples.md)
-### [Rotary NeoPixel](due-script/samples/rotary-neopixel.md)
+### [NeoPixe Matrix](due-script/samples/neopixel-matrix.md)
+### [NeoPixel Rotary ](due-script/samples/rotary-neopixel.md)
+### [Analog Clock](due-script/samples/pulse-analogclock.md)
+### [Bouncing Ball](due-script/samples/pulse-bouncingball.md)
 ### [Falling Duck](due-script/samples/fallingduck.md)
 ### [Space Pulse](due-script/samples/spacepulse.md)
 
@@ -36,4 +40,3 @@
 # [Console](console.md)
 
 # [Legal](legal.md)
-
