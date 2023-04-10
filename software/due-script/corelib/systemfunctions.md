@@ -19,11 +19,9 @@ The last character returned in Version is board <br>
 - **PrintLn(text)**  - Prints the value of the argument to the console then moves to the next line <br>
 **text:** String or variable
 
-- **GetTicks()** - read system current ticks in microseconds  <br>
+- **TickUs()** - read system ticks microseconds  <br>
 
-<!---
-- **GetSeconds()** - read system current ticks in seconds  <br>
--->
+- **TickMs()** - read system ticks in milliseconds  <br>
 
 - **GetCh()** - reads character input, in ASCII format. Return **-1** when no character detected  <br>
 
