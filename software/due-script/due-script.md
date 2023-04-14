@@ -116,12 +116,14 @@ Next
 ```
 
 ### If-Statement
+If statements must end with the `End` command. This will only end the If statement and not your program. 
 
 ```basic 
 If x=1
 PrintLn("one")
 Else 
 PrintLn("not one")
+End
 ```
 ### Labels
 
@@ -141,7 +143,7 @@ $Goto Loop
 
 ### End & Return
 
-End terminates the program.
+End terminates the program except when used to close an `if` statement. 
 
 ```basic
 Print("Hello")
