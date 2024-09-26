@@ -52,7 +52,7 @@ print(duelink.System.GetTickMilliseconds())
 print(duelink.System.GetTickMicroseconds())
 
 #  Delay 1 second
-duelink.System.Wait(1)
+duelink.System.Wait(1000)
 
 #  Reset the device
 duelink.System.Reset(0)
