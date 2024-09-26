@@ -36,16 +36,16 @@ You do not need to learn microcontrollers and you do not need to settle with Mic
 
 While Python is the main supported language, DUELink Spider works beautifully with JavaScript pages, .NET C# projects, and more.
 
-[![Coding Options](images/btn-coding-options.png)](/software/coding-options/coding-options.md)
+[![Coding Options](images/btn-coding-options.png)](/software/coding-options/intro.md)
 
 ---
-## Hardware options
+## DUELink Spider
 
 ![Spider Connections](images/spider-connections.png)
 
 DUELink Spider is the bridge that allows you to effortlessly connect thousands of electronic sensors and modules to your PC/Phone/RPI - just plug and play!
 
-[![Hardware](images/btn-hardware-options.png)](/hardware/intro.md)
+[![Hardware](images/btn-hardware-options.png)](/hardware/spider.md)
 
 ---
 
