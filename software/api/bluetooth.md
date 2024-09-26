@@ -2,7 +2,7 @@
 
 ---
 
-Set name or pin code for bluetooth. 
+Provide api allow user to set name, pin code for bluetooth.
 
 > [!NOTE] 
 > This feature is available on DUELink Spider only.

@@ -34,8 +34,6 @@ The example below initialize CAN at 500Kbs, check any message available, read, i
 
 ## [Python](#tab/py)
 ```py
-from DUELink.Can import CanMessage
-
 duelink.Can.Initialize(500000)
 
 while True :
@@ -55,10 +53,12 @@ while True :
 
 ```
 
+> [!TIP]
+> To use CanMessage class, need to import:  
+> ```from DUELink.Can import CanMessage```
+
 ## [JavaScript](#tab/js)
 ```js
-import { CanMessage } from './duelink.js';
-
 await duelink.Can.Initialize(500000)
 
 while (true) 
@@ -80,6 +80,10 @@ while (true)
     await Util.sleep(1000)
 }
 ```
+
+> [!TIP]
+> To use CanMessage class, need to import:  
+> ```import { CanMessage } from './duelink.js'```
 
 ## [.NET](#tab/net)
 ```cs
