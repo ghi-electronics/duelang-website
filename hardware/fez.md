@@ -1,6 +1,6 @@
 # FEZ
 ---
-These FEZ products can be used with the DUE platform.
+These FEZ products can be used with the DUELink.
 
 **FEZ Flea**
 
@@ -22,7 +22,7 @@ The FEZ Pico also includes a STEMMA connector that can connect to many existing 
 
 ![Pico Pinout](images/pico-due-pinout.png)
 
-Visit the [GHI Electronics](https://www.ghielectronics.com/sitcore/sbc/) to learn about the product and see purchasing options.
+Visit the GHI Electronics to learn about the product and see purchasing options.
 
 <div style="text-align: center;">
 
@@ -32,19 +32,8 @@ Visit the [GHI Electronics](https://www.ghielectronics.com/sitcore/sbc/) to lear
 
 ---
 
-## Beginner to Expert
-
-We recommend beginners start out with the [BrainPad](brainpad.md), it is made for beginners and scales up to advanced learning. The FEZ boards can then be used to start designing prototypes and proof of concepts. Low-volume products can be manufactured with ease, thanks to the small form factor and SMT solderability of the FEZ boards. 
-
-![FEZ Flea SoM](images/beginner-expert.jpg)
-
-> [!TIP]
-> The heart to the FEZ boards is [SITCore SC13](https://www.ghielectronics.com/sitcore/) chipset.
-
----
-
 ## Loading the Firmware
-The first step to load the DUE firmware on your hardware is to navigate to the [console.duelink.com](https://https://console.duelink.com/) and click on the **Firmware** tab and follow the instructions.
+The first step to load the DUELink firmware on your hardware. Navigate to the [console.duelink.com](https://https://console.duelink.com/) and click on the **Firmware** tab and follow the instructions.
 
 ![DUE Firmware](images/due-firmware.png) 
 
