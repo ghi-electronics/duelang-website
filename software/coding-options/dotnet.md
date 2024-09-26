@@ -12,7 +12,7 @@ The provided library is implemented in C# but the user can use any .NET system, 
 This page assumes the user is already familiar with .NET C# and there is a development machine that is already setup to build and run .NET programs.
 
 > [!TIP]
-> Make sure your hardware is updated with the latest firmware listed on the [downloads](..\downloads.md) page.
+> Make sure your hardware is updated with the latest firmware listed on the [downloads](../downloads.md) page.
 
 Start a new project with a simple line of code to test out the project is running
 
@@ -22,7 +22,7 @@ Start a new project with a simple line of code to test out the project is runnin
 ```cs
 Console.WriteLine("Hello, World!");
 ```
-Download and install the latest `GHIElectronics.DUELink` library from NuGet.org. Alternatively, get it from the [Downloads](../downloads.md) page.
+Download and install the latest `GHIElectronics.DUELink` library from NuGet.org. Alternatively, get it from the [downloads](../downloads.md) page.
 
 ## Blinky!
 

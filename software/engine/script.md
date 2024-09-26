@@ -1,13 +1,17 @@
 # DUELink Script
 ---
 
-The DUELink engine includes a scripting language called DUELink Script that runs internally on any DUELink Hardware. The scripts are used to tunnel in the commands from a high level language such as Python. It can also be used to run standalone, independent from any host. This very easy-to-learn scripting language is inspired by BASIC and Python.
+The DUELink engine includes a scripting language that runs internally on any DUELink Hardware. The scripts are used to tunnel in the commands from a high level language such as Python. It can also be used to run standalone, independent from any host. This very easy-to-learn scripting language is inspired by BASIC and Python.
 
-The on-line [DUE Console](../../software/console.md) lets developers start experimenting with DUE Script and the physical world in minutes...no installation is necessary!
+The web-hosted [DUELink Console](../engine/console.md) lets developers start experimenting with DUELink Scripts in minutes... no installation is necessary!
 
 ## Operating Modes
 
-DUE Script has two modes *Immediate mode* and *Record mode*. *Immediate mode* commands are executed immediately. *Immediate mode* commands are a single line of code. *Record mode* commands are stored in flash and then can be executed. The [DUE Console](../../software/console.md) handles these modes automatically. The following details are only needed when not using DUE Console, like when using a terminal software like TeraTerm.
+DUELink Script has two modes *Immediate mode* and *Record mode*. *Immediate mode* commands are executed immediately. *Immediate mode* commands are a single line of code. This is mainly used when tunneling commands from a host machine.
+
+The other mode is *Record mode* where commands are stored on the device's memory and then can be executed. This is used for either to extend the device's high level API functionality through the [script](../api/script.md) API. It can also be used to save and run functionality on the device to run stand alone away from a host machine.
+
+The [DUELink Console](../engine/console.md) handles these modes automatically. The following details are only needed when not using DUE Console, like when using a terminal software, like TeraTerm.
 
 **Immediate Mode**
 
@@ -28,23 +32,23 @@ The *Record mode*, is entered using the `$` command. This will also modify the p
 
 ![TeraTerm](../images/teraterm-record.png)
 
-|Statement              |Description                                                            |
-|:----------------------|:----------------------------------------------------------------------|
-|$                      |Sets the device in record mode                                      |
-|>                      |Exits record mode and returns to direct mode                                    |
+|Statement  |Description
+|---        |---
+|$          |Sets the device in record mode
+|>          |Exits record mode and returns to direct mode
 
 The following statements control the program recorded in flash, but can be used in both *Immediate or Record modes*. When used in *Record mode* these special statements execute, but are not added to the program in flash. 
 
-|Statement              |Description                                                            |
-|:----------------------|:----------------------------------------------------------------------|
-|Run                    |Executes the program stored in flash                                     |
-|New                    |Erases the program stored in flash                                    |
-|List                   |Returns all the code in your program                                     |
+|Statement  |Description
+|---    |---|
+|Run        |Executes the program stored in flash
+|New        |Erases the program stored in flash
+|List       |Returns all the code in your program
 
 > [!TIP]
 > A running program can be terminated by hitting the ESC key, DEL Key, or Backspace Key. 
 
-```basic 
+```
 > $
 $ LogLn(x)
 $ LogLn(y)
@@ -60,7 +64,7 @@ LogLn(y)
 ```
 
 > [!NOTE]
-> The [DUE Console](../console.md) hides the prompts and automatically switches to the appropriate mode.
+> The DUE Console hides the prompts and automatically switches to the appropriate mode.
 
 ---
 ## Script Features

@@ -8,21 +8,20 @@
 
 </div>
 
-## Hardware Selection
+## System Setup
+### Hardware Setup
 
-The first step is to pick from one of the many available [DUE Hardware](../hardware/intro.md) options. 
+Make sure your DUELink hardware is functional using [demo.duelink.com](https://demo.duelink.com/). Check that the board has the latest firmware. Compare the version  shown on the demo page when the device is connected to teh version found on teh [Downloads](downloads.md) page.
 
-Follow the hardware instructions to load the latest DUE Link firmware onto your device.
+### Software Setup
 
-## Start Coding
-
-There are multiple langues can be used to comminucate with DUELink controller.
+DUELink is made for software developers so we are assuming you already have a development machine that is already building Python or JavaScrpt programs for example. See the [Coding Options](coding-options/intro.md) to see the available options and install the available libraries.
 
 ---
 
 ## Blink LED
 
-Assuming you already have hardware and the board is loaded with the latest firmware, We will start by blinking an LED on different langues.
+Following one of the available [Coding Options](coding-options/intro.md) will reveal all the needed steps to blink the on-board LED using the LED API, which handles the LED internally inside the DUELink Engine. Here is a similar example but this one uses a loop on the host side to set the LED high and low.
 
 # [Python](#tab/py)
 
@@ -70,19 +69,6 @@ while (true) {
 	Thread.Sleep(500);
 }
 ```
-
-
-# [DUE Script](#tab/due)
-
-```
-@Loop
-  Led(1, 0, 0)
-  Wait(500)
-  Led(0, 1, 0)
-  Wait(500)
-Goto Loop
-```
-
 ---
 
 ---
@@ -98,7 +84,7 @@ Pin "number" | On-board Feature
 'p' or 'P' | Piezo buzzer
 'l' or 'L' | LED
 
-This is an example of how to blink the on-board LED.
+This is an example of how to blink the on-board LED using the [Digital](api/digital.md) class.
 
 # [Python](#tab/py)
 
@@ -146,15 +132,4 @@ while (true) {
 	Thread.Sleep(500);
 }
 ```
-
-
-# [DUE Script](#tab/due)
-
-```
-@Loop
-  DWrite('l', 1)
-  Wait(500)
-  DWrite('l', 0)
-  Wait(500)
-Goto Loop
-```
+---

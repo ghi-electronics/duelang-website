@@ -10,7 +10,7 @@ Python is the main language used with AI and data science. The provided DUELink 
 This page assumes the user is already familiar with Python and there is a development machine that is already setup to build and run Python programs. No changes are needed there but we are using Microsoft Visual Studio Code as a personal preference.
 
 > [!TIP]
-> Make sure your hardware is updated with the latest firmware listed on the [downloads](..\downloads.md) page.
+> Make sure your hardware is updated with the latest firmware listed on the [downloads](../downloads.md) page.
 
 Start a new project with a simple line of code to test out the project is running.
 
