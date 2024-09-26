@@ -47,32 +47,3 @@ ___
 > [!TIP] 
 > Setting count to **-1** will blink the LED forever, and **0** will turn off the LED.
 
-
-Hardware's on-board LED can also be accessed directly using the [`Digital.Write`](../corelib/digital.md) function.
-
-## [Python](#tab/py)
-
-```py
-Digital.Write('L',1)
-```
-
-## [JavaScript](#tab/js)
-
-
-```js
-Digital.Write('L',1)
-```
-
-## [.NET](#tab/net)
-
-
-```cs
-Digital.Write('L',1)
-```
-
-## [DUE Script](#tab/due)
-
-
-```basic
-DWrite('L',1)
-```
