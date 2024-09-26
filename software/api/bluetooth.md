@@ -1,5 +1,7 @@
 # Bluetooth
 
+---
+
 This feature is available on DUELink Spider only.
 
 - **Bluetooth.SetName(name)** - Sets bluetooth name <br>
@@ -9,26 +11,22 @@ This feature is available on DUELink Spider only.
 **code:** In text, has to be 4 characters from 0 to 9. Default is "1234"
 
 
-### [Python](#tab/py)
+## [Python](#tab/py)
 ```py
 duelink.Bluetooth.SetName("DUELink00")
 duelink.Bluetooth.SetPinCode("5678")
 ```
 
-### [JavaScript](#tab/js)
+## [JavaScript](#tab/js)
 ```js
 await duelink.Bluetooth.SetName("DUELink00")
 await duelink.Bluetooth.SetPinCode("5678")
 ```
 
-### [.NET](#tab/net)
+## [.NET](#tab/net)
 ```cs
 duelink.Bluetooth.SetName("DUELink00");
 duelink.Bluetooth.SetPinCode("5678");
 ```
 
-### [DUE Script](#tab/due)
-```
-
-```
 ---

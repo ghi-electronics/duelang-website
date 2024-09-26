@@ -1,9 +1,12 @@
 # Servo Motor
 
-### [Python](#tab/py)
+---
+
 - **Servo.Set(pin, degree)** - Sets servo motor connected to pin to a specific position<br>
 **pin:** Pin number. Pin 5 and 6 supported by hardware PWM which is more accurate than other pins <br>
 **degree:**  0 to 180
+
+## [Python](#tab/py)
 
 ```py
 while True:
@@ -19,10 +22,7 @@ while True:
     time.sleep(1)
 ```
 
-### [JavaScript](#tab/js)
-- **Servo.Set(pin, degree)** - Sets servo motor connected to pin to a specific position<br>
-**pin:** Pin number. Pin 5 and 6 supported by hardware PWM which is more accurate than other pins <br>
-**degree:**  0 to 180
+## [JavaScript](#tab/js)
 
 ```js
 while (true) {
@@ -39,10 +39,7 @@ while (true) {
 }
 ```
 
-### [.NET](#tab/net)
-- **Servo.Set(pin, degree)** - Sets servo motor connected to pin to a specific position<br>
-**pin:** Pin number. Pin 5 and 6 supported by hardware PWM which is more accurate than other pins <br>
-**degree:**  0 to 180
+## [.NET](#tab/net)
 
 ```cs
 while (true) {
@@ -59,19 +56,6 @@ while (true) {
 }
 ```
 
-### [DUE Script](#tab/due)
-- **ServoSet(pin, degree)** - Sets servo motor connected to pin to a specific position<br>
-**pin:** Pin number. Pin 5 and 6 supported by hardware PWM which is more accurate than other pins <br>
-**degree:**  0 to 180
-
-```basic
-@Loop
-ServoSet(0,0)
-Wait(1000)
-ServoSet(0,180)
-Wait(1000)
-Goto Loop
-```
 ---
 
 > [!TIP] 
