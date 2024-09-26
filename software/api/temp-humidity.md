@@ -19,8 +19,8 @@ This example reads temperature and humidity every one second, using DHT11 sensor
 ## [Python](#tab/py)
 ```basic
 while True:
-    print(duelink.Humidity.Read(0, duelink.HumiditySensorType.DHT11))
-    print(duelink.Temperature.Read(0, duelink.TemperatureSensorType.DHT11))
+    print(duelink.Humidity.Read(0, 11))
+    print(duelink.Temperature.Read(0, 11))
 
     time.sleep(1)
 ```
@@ -29,8 +29,8 @@ while True:
 ```basic
 while (true)
 {
-    console.log(await duelink.Humidity.Read(0, duelink.Humidity.DHT11))
-    console.log(await duelink.Temperature.Read(0, duelink.Temperature.DHT11))
+    console.log(await duelink.Humidity.Read(0, 11))
+    console.log(await duelink.Temperature.Read(0, 11))
 
     await Util.sleep(1000)
 }
@@ -40,8 +40,8 @@ while (true)
 ```basic
 while (true)
 {
-    Console.WriteLine(duelink.Humidity.Read(0, HumiditySensorType.DHT11));
-    Console.WriteLine(duelink.Temperature.Read(0, TemperatureSensorType.DHT11));
+    Console.WriteLine(duelink.Humidity.Read(0, 11));
+    Console.WriteLine(duelink.Temperature.Read(0, 11));
 
     Thread.Sleep(1000);
 }
