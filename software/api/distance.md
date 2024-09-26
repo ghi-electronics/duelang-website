@@ -29,10 +29,6 @@ while True:
 ```
 
 ## [JavaScript](#tab/js)
-- **Distance.Read(trigger, echo)** - uses ultrasonic sonic sensor to read distance.<br>
-**trigger:** The pin number that is connected to trigger (pulse) signal<br>
-**echo:**  The pin number that is connected to echo signal, use `-1` for single pin <br>
-**Returns:**  Distance in centimeters
 
 ```js
 while (true) {
@@ -46,10 +42,7 @@ while (true) {
 ```
 
 ## [.NET](#tab/net)
-- **Distance.Read(trigger, echo)** - uses ultrasonic sonic sensor to read distance.<br>
-**trigger:** The pin number that is connected to trigger (pulse) signal<br>
-**echo:**  The pin number that is connected to echo signal, use `-1` for single pin <br>
-**Returns:**  Distance in centimeters
+
 
 ```cs
 while (true) {

@@ -6,14 +6,14 @@ Provide api allow user to set name, pin code for bluetooth.
 
 
 - **Bluetooth.SetName(name)** - Sets bluetooth name <br>
-**name:**  Bluetooth name, max characters is 12. Default is "DUELink"
+**name:**  Bluetooth name, max characters is 12. Default is "DUELink" <br>
 **Returns:** true = success, false = not success <br>
 
 - **Bluetooth.SetPinCode(code)** - Sets bluetooth pin code  <br>
-**code:** In "text", has to be 4 characters from 0 to 9. Default is "1234"
+**code:** In "text", has to be 4 characters from 0 to 9. Default is "1234" <br>
 **Returns:** true = success, false = not success <br>
 
-The example below will change Bluetooth name to "DUELink00", and change pin code to "5678"
+The example below change Bluetooth name to "DUELink00", and change pin code to "5678"
 
 ## [Python](#tab/py)
 ```py

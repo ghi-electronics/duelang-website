@@ -607,7 +607,7 @@ duelink.Display.ShowBuffer(imageRaw, colorDepth);
 
 
 > [!NOTE]
-> ShowBuffer() automatically calls `Show()` internally.
+> ShowBuffer() calls `Show()` internally.
 
 ---
 
