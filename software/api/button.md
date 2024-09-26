@@ -11,7 +11,7 @@ The button feature makes it easier to work with buttons, when compared to readin
 
 - **Button.JustReleased(pin)** <br>
 **pin:** pin number<br>
-**Returns:** bool - true after release first time called. If called again returns false<br>
+**Returns:** true after release first time called. If called again returns false<br>
 
 - **bool Button.JustPressed(pin)** Checks if a button was pressed<br>
 **pin:** pin number<br>
@@ -82,5 +82,5 @@ while (true) {
 ```
 ---
 
-This feature is not available on all pins; however, [Digital Read](digital.md) can be used instead, which is available on all pins.
+This feature is not available on all pins. However, [Digital Read](digital.md) can be used instead, which is available on all pins.
 
