@@ -15,6 +15,7 @@
 ## [Analog](api/analog.md)
 ## [Bluetooth](api/bluetooth.md)
 ## [Button](api/button.md)
+## [Controller Area Network (CAN)](api/can.md)
 ## [Digital](api/digital.md)
 ## [Distance](api/distance.md)
 ## [Frequency](api/frequency.md)
