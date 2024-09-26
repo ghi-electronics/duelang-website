@@ -14,7 +14,7 @@
 - **Uart.BytesToRead()** - Count  <br>
 **Returns:** How many bytes have been buffered and ready to be read
 
-The example below enables UART at baudrate 115200, check how many bytes buffered, read plus 1, then send back to sender
+The example below enables UART at baudrate 115200, check how many bytes buffered, read and plus 1, then send back to sender
 
 ## [Python](#tab/py)
 ```py

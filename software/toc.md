@@ -13,6 +13,7 @@
 
 # [API](api/intro.md)
 ## [Analog](api/analog.md)
+## [Bluetooth](api/bluetooth.md)
 ## [Button](api/button.md)
 ## [Digital](api/digital.md)
 ## [Distance](api/distance.md)

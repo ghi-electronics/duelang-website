@@ -8,6 +8,7 @@ The DUELink core library provided for multiple languages (such as Python) gives 
 | API       | Description          |
 | --- |---|
 | [Analog](analog.md)	| Read or Write analog pins |
+| [Bluetooth](bluetooth.md)	| Set name or pin code for bluetooth |
 | [Button](button.md)	| Read a button. Similar to Digital read but handles debounce |
 | [Digital](digital.md) | Read or write digital pins |
 | [Distance](distance.md) | Read ultrasonic distance sensor |
