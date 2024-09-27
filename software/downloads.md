@@ -20,7 +20,7 @@ Preview | Preview of the next release, not quite ready for production use.
 
 ## Firmware
 
-### SC13 (FEZ Flea, FEZ Pico, BrainPad Pulse)
+### SC13 (DUELink Spider, FEZ Flea/Pico, BrainPad Pulse)
 
 File | Date | Status
 --- | --- | ---
@@ -86,6 +86,8 @@ File | Date | Status
 [v1.1.1](https://github.com/ghi-electronics/due-libraries/tree/main/javascript) | 2023-09-26 | RC
 [v1.1.0](https://github.com/ghi-electronics/due-libraries/tree/main/javascript) | 2023-08-08 | RC
 [v1.0.3](https://github.com/ghi-electronics/due-libraries/tree/main/javascript) | 2023-05-30 | RC
+
+---
 
 ## Release Notes
 
