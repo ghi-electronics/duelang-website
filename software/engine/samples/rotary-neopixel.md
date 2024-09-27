@@ -5,8 +5,7 @@
 
 ![Rotary Module](images/rotary-neopixel.gif)
 
-This sample uses a Grove rotary module and with the FEZ Flea attached to a Grove XIAO shield to control a NeoPixel Ring. This sample uses [Analog](../corelib/analog.md) & [Neopixel](../corelib/neopixel.md).
-
+This sample uses a Grove rotary module and with the FEZ Flea attached to a Grove XIAO shield to control a NeoPixel Ring.
 
 **Hardware:**
  - FEZ Flea

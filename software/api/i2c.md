@@ -1,19 +1,20 @@
 # I2C
 
+---
+
 I2C is one of protocol that used widely in most sensors.
 
-### [Python](#tab/py)
 - **I2c.Write(address, arrayWrite, indexWrite, writeCount)** Write an array of data to an I2C slave<br>
 **address:** I2C slave address<br>
 **arrayWrite:** Array to send<br>
-**indexWrite:** Index of data in the array (optional).<br>
-**writeCount:** The number of bytes to write (optional) <br>
+**indexWrite:** Index of data in the array (optional, default is 0).<br>
+**writeCount:** The number of bytes to write (optional, default is length of array) <br>
 
 - **I2c.Read(address, arrayRead, indexRead, readCount)** Write an array of data to an I2C slave<br>
 **address:** I2C slave address<br>
 **arrayRead:** Array to read<br>
-**indexRead:** Index of data in the array (optional)<br>
-**readCount:** The number of bytes to read (optional) <br>
+**indexRead:** Index of data in the array (optional, default is 0)<br>
+**readCount:** The number of bytes to read (optional, default is length of array) <br>
 
 - **I2c.WriteRead(address, arrayWrite, indexWrite, writeCount, arrayRead, indexRead, readCount)** Write an array of data to an I2C slave <br>
 **address:** I2C slave address<br>
@@ -23,6 +24,9 @@ I2C is one of protocol that used widely in most sensors.
 **arrayRead:** Array to read<br>
 **indexRead:** Index of data in the array <br>
 **readCount:** The number of bytes to read <br>
+
+
+## [Python](#tab/py)
 
 ```py
 # Write 11 and 22 to a slave at address 0x2C
@@ -37,28 +41,7 @@ duelink.I2c.Read(0x2C, dataRead)
 duelink.I2c.WriteRead(0x2C, dataWrite, 0, len(dataWrite), dataRead, 0, len(dataRead))
 ```
 
-### [JavaScript](#tab/js)
-- **I2c.Write(address, arrayWrite, indexWrite, writeCount)** Write an array of data to an I2C slave<br>
-**address:** I2C slave address<br>
-**arrayWrite:** Array to send<br>
-**indexWrite:** Index of data in the array (optional).<br>
-**writeCount:** The number of bytes to write (optional <br>
-
-- **I2c.Read(address, arrayRead, indexRead, readCount)** Write an array of data to an I2C slave<br>
-**address:** I2C slave address<br>
-**arrayRead:** Array to read<br>
-**indexRead:** Index of data in the array (optional).<br>
-**readCount:** The number of bytes to read (optional) <br>
-
-- **I2c.WriteRead(address, arrayWrite, indexWrite, writeCount, arrayRead, indexRead, readCount)** Write an array of data to an I2C slave <br>
-**address:** I2C slave address<br>
-**arrayWrite:** Array to send<br>
-**indexWrite:** Index of data in the array<br>
-**writeCount:** The number of bytes to write <br>
-**arrayRead:** Array to read<br>
-**indexRead:** Index of data in the array <br>
-**readCount:** The number of bytes to read <br>
-
+## [JavaScript](#tab/js)
 
 ```js
 let dataWrite = [11,22]
@@ -74,27 +57,7 @@ await duelink.I2c.Read(0x2C, dataRead)
 await duelink.I2c.WriteRead(0x2C, dataWrite, 0, dataWrite.length, dataRead, 0, dataRead.length)
 ```
 
-### [.NET](#tab/net)
-- **I2c.Write(address, arrayWrite, indexWrite, writeCount)** Write an array of data to an I2C slave<br>
-**address:** I2C slave address<br>
-**arrayWrite:** Array to send<br>
-**indexWrite:** Index of data in the array (optional)<br>
-**writeCount:** The number of bytes to write (optional) <br>
-
-- **I2c.Read(address, arrayRead, indexRead, readCount)** Write an array of data to an I2C slave<br>
-**address:** I2C slave address<br>
-**arrayRead:** Array to read<br>
-**indexRead:** Index of data in the array (optional).<br>
-**readCount:** The number of bytes to read (optional) <br>
-
-- **I2c.WriteRead(address, arrayWrite, indexWrite, writeCount, arrayRead, indexRead, readCount)** Write an array of data to an I2C slave <br>
-**address:** I2C slave address<br>
-**arrayWrite:** Array to send<br>
-**indexWrite:** Index of data in the array<br>
-**writeCount:** The number of bytes to write <br>
-**arrayRead:** Array to read<br>
-**indexRead:** Index of data in the array <br>
-**readCount:** The number of bytes to read <br>
+## [.NET](#tab/net)
 
 ```cs
 var dataWrite = new byte[] {11, 22};
@@ -110,23 +73,5 @@ duelink.I2c.Read(0x2C, dataRead);
 duelink.I2c.WriteRead(0x2C, dataWrite, 0, dataWrite.Length, dataRead, 0, dataRead.Length);
 ```
 
-
-### [DUE Script](#tab/due)
-
-DUE Scrip uses a different fuction to access I2C.
-
-- **I2cBytes(address, arrayWrite, writeCount, arrayRead, readCount)**  Reads and/or writes up to 4 bytes to/from I2C bus. Data is transfered from variables A, B, C, D. The return values (if any) are also stored in the same variables. <br>
-**address:** I2C slave address<br>
-**arrayWrite:** Array to send<br>
-**writeCount:** The number of bytes to write<br>
-**arrayRead:** Array to read<br>
-**readCount:** The number of bytes to read
-
-```basic
-# Write 1 byte, read 6 bytes from slave at address 0x2C
-dim a[1]
-a[0] = 1
-dim b[6]
-i2cbytes(0x2c, a, 1, b, 6) 
-```
+---
 

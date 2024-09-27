@@ -1,17 +1,17 @@
 # Touch
 
+---
+
 This feature allows sensing of a finger or human touch to a pin, or when using a touch screen, use 'x' or 'y' to return the x & y positions where the screen is being touched.
 
-- **Touch.Read(pin)** - Initializes the pin for touch, or reads the x y position on a touch screen   <br>
+- **Touch.Read(pin)** - Read pin for touch, or reads the x y position on a touch screen   <br>
 **pin:** pin number, 'x', or 'y' <br>
 **pin Returns:** 0 = pin not touched, 1 = pin touched <br>
 **x or y Returns:**  -1 = screen not touched, x position , y position
 
+This example detects human touching on pin 6, interval 100ms
 
-This example detects human touch on pin 6, interval 100ms
-
-
-### [Python](#tab/py)
+## [Python](#tab/py)
 ```py
 while True:
     touched = duelink.Touch.Read(6)
@@ -23,7 +23,7 @@ while True:
 
 ```
 
-### [JavaScript](#tab/js)
+## [JavaScript](#tab/js)
 ```js
 while (true)
 {
@@ -36,7 +36,7 @@ while (true)
 }
 ```
 
-### [.NET](#tab/net)
+## [.NET](#tab/net)
 ```cs
 while (true)
 {
@@ -49,22 +49,4 @@ while (true)
 }
 ```
 
-### [DUE Script](#tab/due)
-```
-@Loop
-# Pin touch
-a=TouchRead(0):b=TouchRead(1):c=TouchRead(2)
-If a>0:PrintLn("pin 0"):End 
-If b>0:PrintLn("pin 1"):End
-If c>0:PrintLn("pin 2"):End 
-
-# Prints x & y coordinates from touch screen to the Due Console Log window
-x = TouchRead('x')
-y = TouchRead('y')
-LogLn(x)
-LogLn(y)
-
-Wait(100)
-Goto Loop
-```
 ---

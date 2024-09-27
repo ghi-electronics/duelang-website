@@ -2,7 +2,7 @@
 ---
 ![BrainPad Logo](images/brainpad-logo.png) 
 
-Educators now have the power to use their beloved language-of-choice with BrainPad devices, thanks to the power of the DUE platform.
+Educators now have the power to use their beloved language-of-choice with BrainPad devices, thanks to DUELink!
 
 All BrainPad microcomputers are fully supported. However, BrainPad Pulse include additional natively-supported components, which are the display and the buzzer.
 
@@ -55,10 +55,10 @@ The BrainPad website is a great place to get started, it shows the steps needed 
 
 </div>
 
----
-
 # Hardware Demos
-The edge connector on the supported BrainPad hardware combined with the ease of the DUE platform, open up many possibilities to try the existing accessories available on the market. Here are just a few:
+The edge connector on the supported BrainPad hardware combined with the ease of DUELink, opens up many possibilities to try the existing accessories available on the market. 
+
+Here are just a few:
 
 ## Smart House
 This example demonstrates the extensibility of the DUE platform. Using the DUE library from within full .NET. See the code samples repo for all the available sensors. We added a BrainClip IR remote control to our demo. 
@@ -82,25 +82,5 @@ NeoPixel Matrix panels pair well with the DUE platform, because NeoPixel support
 
 [Falling Bird Sample Repo](https://github.com/ghi-electronics/due-samples/tree/main/NeoMatrix/16x16/FallingBird)
 
-[More NeoPixel Matrix Projects](../software/engine/samples/neopixel-matrix.md)
-
 ![NeoPixel Falling Bird](images/falling-bird.gif) 
-
----
-## BrainGamer Sketch
-Creating art is easy when you pair the BrainPad Pulse with the BrainGamer
-
-[BrainGamer Sketch Demo](../software/engine/samples/pulse-gamer-sketch.md)
-
-![BrainGamer Sketch](../software/engine/samples/images/braingamer-sketch.gif)
-
----
-
-## Beginner to Expert
-
-We recommend beginners start out with the BrainPad, it is made for beginners and scales up to advanced learning. The [FEZ boards](fez.md) can then be used to start designing prototypes and proof of concepts. Low-volume products can be manufactured with ease, thanks to the small form factor and SMT solderability of the [FEZ boards](fez.md). 
-
-![FEZ Flea SoM](images/beginner-expert.jpg) 
-
-
 

@@ -1,18 +1,21 @@
 # Distance Sensor
 
+---
+
 This function is used when using a distance sensors. 
 
+- **Distance.Read(trigger, echo)** - uses ultrasonic sonic sensor to read distance.<br>
+**trigger:** The pin number that is connected to trigger (pulse) signal<br>
+**echo:**  The pin number that is connected to echo signal, use `-1` for single pin <br>
+**Returns:**  Distance in centimeters
 
 > [!TIP]
 > Most sensors need 5V to work.
 
 This example will read distance, using pin 0 for trigger and pin 1 for echo pin.
 
-### [Python](#tab/py)
-- **Distance.Read(trigger, echo)** - uses ultrasonic sonic sensor to read distance.<br>
-**trigger:** The pin number that is connected to trigger (pulse) signal<br>
-**echo:**  The pin number that is connected to echo signal, use `-1` for single pin <br>
-**Returns:**  Distance in centimeters
+## [Python](#tab/py)
+
 
 ```py
 while True:
@@ -25,11 +28,7 @@ while True:
 }
 ```
 
-### [JavaScript](#tab/js)
-- **Distance.Read(trigger, echo)** - uses ultrasonic sonic sensor to read distance.<br>
-**trigger:** The pin number that is connected to trigger (pulse) signal<br>
-**echo:**  The pin number that is connected to echo signal, use `-1` for single pin <br>
-**Returns:**  Distance in centimeters
+## [JavaScript](#tab/js)
 
 ```js
 while (true) {
@@ -42,11 +41,8 @@ while (true) {
 }
 ```
 
-### [.NET](#tab/net)
-- **Distance.Read(trigger, echo)** - uses ultrasonic sonic sensor to read distance.<br>
-**trigger:** The pin number that is connected to trigger (pulse) signal<br>
-**echo:**  The pin number that is connected to echo signal, use `-1` for single pin <br>
-**Returns:**  Distance in centimeters
+## [.NET](#tab/net)
+
 
 ```cs
 while (true) {
@@ -59,20 +55,5 @@ while (true) {
 }
 ```
 
-### [DUE Script](#tab/due)
-- **ReadDistance(trigger, echo)** - uses ultrasonic sonic sensor to read distance.<br>
-**trigger:** The pin number that is connected to trigger (pulse) signal<br>
-**echo:**  The pin number that is connected to echo signal, use `-1` for single pin <br>
-**Returns:**  Distance in centimeters
-
-```basic
-@Loop
-x = ReadDistance(0,1) 
-If x>0 
-    PrintLn(x)
-End
-Wait(100)
-Goto Loop
-```
 ---
 

@@ -8,12 +8,14 @@
 
 </div>
 
-## System Setup
-### Hardware Setup
+
+## Hardware Setup
 
 Make sure your DUELink hardware is functional using [demo.duelink.com](https://demo.duelink.com/). Check that the board has the latest firmware. Compare the version  shown on the demo page when the device is connected to teh version found on teh [Downloads](downloads.md) page.
 
-### Software Setup
+---
+
+## Software Setup
 
 DUELink is made for software developers so we are assuming you already have a development machine that is already building Python or JavaScrpt programs for example. See the [Coding Options](coding-options/intro.md) to see the available options and install the available libraries.
 

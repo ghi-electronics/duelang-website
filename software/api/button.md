@@ -1,5 +1,7 @@
 # Buttons
 
+---
+
 The button feature makes it easier to work with buttons, when compared to reading a digital pin for example.
 
 > [!TIP] 
@@ -19,7 +21,7 @@ The button feature makes it easier to work with buttons, when compared to readin
 
 This example checks button 'a'.
 
-### [Python](#tab/py)
+## [Python](#tab/py)
 
 ```py
 duelink.Button.Enable('a', True);
@@ -39,9 +41,9 @@ while True:
 
 
 
-### [JavaScript](#tab/js)
+## [JavaScript](#tab/js)
 ```js
-await duelink.Button.Enable('a', true);
+await duelink.Button.Enable('a', true)
 
 while (true) {
     let d = await duelink.Button.JustPressed('a')
@@ -60,7 +62,7 @@ while (true) {
 }
 ```
 
-### [.NET](#tab/net)
+## [.NET](#tab/net)
 ```cs
 duelink.Button.Enable('a', true);
 
