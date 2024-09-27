@@ -50,4 +50,6 @@
 
 # [Downloads](downloads.md)
 
+# [Resources](resources.md)
+
 # [Legal](legal.md)
