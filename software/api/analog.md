@@ -11,7 +11,7 @@ These functions provide access to analog pins.
 This feature uses software-generated PWM to control the "Analog" level of a pin. It has a fixed frequency of 50Hz.
 
 **Analog.Write( pin, dutyCycle)**<br>
-**pin:** pin number<br>
+**pin:** Pin number<br>
 **dutyCycle:** 0 to 100
 
 This example code will swing the analog output value up and down in a loop.
@@ -73,7 +73,7 @@ This feature works on all pins.
 Use this function to read the analog level on a specific pin.
 
 **Analog.Read(pin)**<br>
-**pin:** pin number <br>
+**pin:** Pin number <br>
 **Returns:** The analog value (0-100) of the pin 
 
 This is an example code to read the analog level on pin 0 and print out to the console 10 times per second.

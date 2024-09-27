@@ -11,9 +11,9 @@ These functions provide access to digital pins.
 Read the current value of a digital pin.
 
 - **Digital.Read(pin, pull)** <br>
-**pin:** pin number <br> 
+**pin:** Pin number <br> 
 **pull:** Sets the internal pull resistors: 'None', 'PullUp', 'PullDown' <br>
-**Returns:** true = high or  false = low 
+**Returns:** True = high or  false = low 
 
 This example will read current value on pin 2.
 
@@ -43,8 +43,8 @@ Console.WriteLine(x);
 Sets a pin's digital output.
 
 - **Digital.Write(pin, state)** <br>
-**pin:** pin number <br> 
-**state:** true = high or  false = low <br>
+**pin:** Pin number <br> 
+**state:** True = high or  false = low <br>
 
 This example will set pin 2 to be High.
 

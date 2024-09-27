@@ -29,15 +29,11 @@ while True:
 ## [JavaScript](#tab/js)
 ```js
 await duelink.Uart.Enable(115200)
-while (true)
-{
-    if (await duelink.Uart.BytesToRead() > 0)
-    {
+while (true){
+    if (await duelink.Uart.BytesToRead() > 0){
         let data = await duelink.Uart.Read()
-
         await duelink.Uart.Write(data + 1)
     }
-
     await Util.sleep(100)
 }
 ```
@@ -45,15 +41,11 @@ while (true)
 ## [.NET](#tab/net)
 ```cs
 duelink.Uart.Enable(115200);
-while (true)
-{
-    if (duelink.Uart.BytesToRead() > 0)
-    {
+while (true){
+    if (duelink.Uart.BytesToRead() > 0){
         var data = duelink.Uart.Read();
-
         duelink.Uart.Write((byte)(data + 1));
     }
-
     Thread.Sleep(100);
 }
 ```

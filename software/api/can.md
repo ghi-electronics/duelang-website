@@ -1,4 +1,4 @@
-# Controller Area Network (CAN)
+# CAN
 
 ---
 
@@ -9,7 +9,7 @@
 **phase1**: Phase 1 timing <br>
 **phase2**: Phase 2 timing <br>
 **prescaler**: Baudrate prescaler <br>
-**synchronizationJumpWidth**: synchronization jump width <br>
+**synchronizationJumpWidth**: Synchronization jump width <br>
 
 - **Can.Available()** - Count  <br>
 **Returns:** How many messages have been buffered and ready to be read
@@ -50,7 +50,6 @@ while True :
         duelink.Can.Write(message)
     
     time.sleep(1)
-
 ```
 
 > [!TIP]
@@ -61,10 +60,8 @@ while True :
 ```js
 await duelink.Can.Initialize(500000)
 
-while (true) 
-{
-    if (await duelink.Can.Available() > 0)
-    {
+while (true) {
+    if (await duelink.Can.Available() > 0){
         let message = await duelink.Can.Read()
        
         // print received message detail
@@ -76,7 +73,6 @@ while (true)
         // send back to sender
         await duelink.Can.Write(message)
     }
-
     await Util.sleep(1000)
 }
 ```
@@ -89,10 +85,8 @@ while (true)
 ```cs
 duelink.Can.Initialize(500000);
 
-while (true) 
-{
-    if (duelink.Can.Available() > 0)
-    {
+while (true) {
+    if (duelink.Can.Available() > 0){
         var message = duelink.Can.Read();
 
         // print received message detail
@@ -104,7 +98,6 @@ while (true)
         // send back to sender
         duelink.Can.Write(message);
     }
-
     Thread.Sleep(1000);
 }
 ```

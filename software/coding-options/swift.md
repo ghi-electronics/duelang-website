@@ -4,7 +4,7 @@
 
 ![Swift Logo](../images/swift.png)
 
-Swift can be used to give you physical access on MacOS devices.
+Swift can be used to give you access to the physical world on MacOS devices.
 
 
 The support for SWIFT is incomplete and only provided as a reference for those interested in exploring the possibilities.

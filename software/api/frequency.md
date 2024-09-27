@@ -6,9 +6,9 @@ This hardware-backed feature generates frequencies/signals on a pin. Since this 
 
 See the specific hardware's page pin-out for details on supported pin(s). 
 
-- **Freq(pin, frequency, duration, dutyCycle)** - provides an accurate hardware generated PWM signal <br>
-**pin:** hardware specific pin number or 'p' for on-board piezo buzzer <br>
-**frequency:** frequency in Hz, min 15Hz, max 10000000Hz (10MHz) <br>
+- **Freq(pin, frequency, duration, dutyCycle)** - Provides an accurate hardware generated PWM signal <br>
+**pin:** Hardware specific pin number or 'p' for on-board piezo buzzer <br>
+**frequency:** Frequency in Hz, min 15Hz, max 10000000Hz (10MHz) <br>
 **duration:** 0 to forever (optional. Default is 0) <br>
 **dutyCycle:** 0.0 to 100.0 (optional. Default is 50)
 
@@ -24,27 +24,21 @@ while True:
 
 ## [JavaScript](#tab/js)
 ```js
-while (true)
-{
-    for (let x = 20; x < 1000; x++)
-    {
+while (true){
+    for (let x = 20; x < 1000; x++){
         await duelink.Frequency.Write('p', x, 200, 50);
         await Util.sleep(200)
     }
-
 }
 ```
 
 ## [.NET](#tab/net)
 ```cs
-while (true)
-{
-    for (var x = 20; x < 1000; x++)
-    {
+while (true){
+    for (var x = 20; x < 1000; x++){
         duelink.Frequency.Write('p', x, 200, 50);
         Thread.Sleep(200);
     }
-
 }
 ```
 ___
