@@ -87,6 +87,8 @@ File | Date | Status
 [v1.1.0](https://github.com/ghi-electronics/due-libraries/tree/main/javascript) | 2023-08-08 | RC
 [v1.0.3](https://github.com/ghi-electronics/due-libraries/tree/main/javascript) | 2023-05-30 | RC
 
+---
+
 ## Release Notes
 
 ### v1.1.4: 2023-10-09
