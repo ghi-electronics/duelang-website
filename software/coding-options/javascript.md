@@ -27,7 +27,7 @@ We can now instantiate and get the DUELink controller ready. We will be using Se
 
 ## Blinky!
 
-Our first program will blink the on-board LED 20 times, where it comes on for 200ms and then it is off for 800ms.
+Our first program will blink the on-board on for 200ms then it shuts off for 800ms, and does this 20 times.
 
 ```js
 import {SerialUSB} from './serialusb.js';
@@ -36,7 +36,7 @@ import * as DUELink from './duelink.js';
 let duelink = new DUELink.DUELinkController(new SerialUSB());
 await duelink.Connect();
 
-// Flash the LED 20 times (on for 200ms and off for 800ms)
+// Flash the LED  (on for 200ms, off for 800ms, 20 times)
 await duelink.Led.Set(200,800,20);
 ```
 
@@ -44,4 +44,4 @@ await duelink.Led.Set(200,800,20);
 
 The [API](../api/intro.md) page includes all details and examples to use all the available "physical world" services.
 
-Use the above example program to initiate the hardware, instantiate the `duelink` object, and then use any of the available APIs, such as `duelink.Sound.Beep('p', 500, 1000)' to generate a one second 500Hz beep using the on-board peizo buzzer.
+Use the above example program to initiate the hardware, instantiate the `duelink` object, and then use any of the available APIs, such as `duelink.Sound.Beep('p', 500, 1000)' to generate a beep using the on-board peizo buzzer with a frequency of 500Hz for 1000ms

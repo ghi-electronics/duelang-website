@@ -25,7 +25,7 @@ Connect the correct COM port and you will be presented with 4 new tabs (Data In,
 
 ## Blinky!
 
-Our first program will blink the on-board LED 20 times, where it comes on for 200ms and then it is off for 800ms.
+Our first program will blink the on-board on for 200ms then it shuts off for 800ms, and does this 20 times..
 
 Go to `Settings` and change the `Data Channels` to 1
 

@@ -26,7 +26,7 @@ Download and install the latest `GHIElectronics.DUELink` library from NuGet.org.
 
 ## Blinky!
 
-Our first program will blink the on-board LED 20 times, where it comes on for 200ms and then it is off for 800ms.
+Our first program will blink the on-board on for 200ms then it shuts off for 800ms, and does this 20 times.
 
 ```cs
 using GHIElectronics.DUELink;
@@ -34,7 +34,7 @@ Console.WriteLine("Hello DUE!");
 var availablePort = DUELinkController.GetConnectionPort();
 var duelink = new DUELinkController(availablePort);
 
-// Flash the LED 20 times (on for 200ms and off for 800ms)
+// Flash the LED  (on for 200ms, off for 800ms, 20 times)
 duelink.Led.Set(200, 800, 20);
 Console.WriteLine("Bye DUE!");
 ```
@@ -43,6 +43,6 @@ Console.WriteLine("Bye DUE!");
 
 The [API](../api/intro.md) page includes all details and examples to use all the available "physical world" services.
 
-Use the above example program to initiate the hardware, instantiate the `duelink` object, and then use any of the available APIs, such as `duelink.Sound.Beep('p', 500, 1000)' to generate a one second 500Hz beep using the on-board peizo buzzer.
+Use the above example program to initiate the hardware, instantiate the `duelink` object, and then use any of the available APIs, such as `duelink.Sound.Beep('p', 500, 1000)' to generate a beep using the on-board peizo buzzer with a frequency of 500Hz for 1000ms
 
 
