@@ -27,7 +27,7 @@ Support for color displays includes ILI9342, ILI9341, and ST7735. These color di
 
 ## Display Configuration
 
-- **Display.Configuration** Property, change display configuration<br>
+- **Display.Configuration** - Property, change display configuration<br>
 **Type:** Screen supported: BuiltIn = 0, ILI9342 = 0x80, ILI9341 = 0x81, ST7735 = 0x82, SSD1306 = 0x3C. If an SSD1306 screen has different i2c slave address 0x3C, set Type to that address directly <br>
 **SpiChipSelect:** Chip select pin, SPI display only<br>
 **SpiDataControl:** Data control pin, SPI display only<br>
@@ -240,7 +240,7 @@ duelink.Display.Show();
 
 All LCD functions process the graphics commands in an internal memory. It starts with Clear(), which clears up the entire graphics memory to a specific color. When the user is ready, the graphical memory is transferred to the display using Show().
 
-- **Display.Clear(color)**  Clears the entire screen to black or white <br>
+- **Display.Clear(color)**  - Clears the entire screen to black or white <br>
 **color:** Color value
 
 - **Display.SetPixel(color, x, y)** <br>
@@ -370,19 +370,19 @@ duelink.Display.Show();
 ---
 ## Text
 
-- **Display.DrawText(text, color, x, y)** <br>
+- **Display.DrawText(text, color, x, y)** - Draw text with default font<br>
 **text:** String message in double quotes. <br>
 **color:** Color value <br>
 **x:** x position <br>
 **y:** x position <br>
 
-- **Display.DrawTextTiny(text, color, x, y)** Draw tiny text - Displays tiny 5px text.<br>
+- **Display.DrawTextTiny(text, color, x, y)** - Draw tiny text - Displays tiny 5px text.<br>
 **text:** String message in double quotes. <br>
 **color:** Color value <br>
 **x:** x position <br>
 **y:** x position <br>
 
-- **Display.DrawTextScale(text, color, x, y, scaleWidth, scaleHeight)** Works exactly the same as LcdText() but adds scaling.<br>
+- **Display.DrawTextScale(text, color, x, y, scaleWidth, scaleHeight)** - Works exactly the same as LcdText() but adds scaling.<br>
 **text:** String message in double quotes. <br>
 **color:** Color value <br>
 **x:** x position <br>
@@ -430,13 +430,13 @@ duelink.Display.Show();
 
 There are cases where images need to be added to the screen. Of course, we are taking about basic simple images, more like a tiny sprite in a game.
 
-- **Display.DrawImage(array, x, y, transform)** Array of pixel, must start with 2 elements that contain the image's width and height <br>
+- **Display.DrawImage(array, x, y, transform)** - Array of pixel, must start with 2 elements that contain the image's width and height <br>
 **array:** Image array (see below). <br>
 **x:** x position on screen. <br>
 **y:** y position on screen. <br>
 **transform:** transform modifier. <br>
 
-- **Display.DrawImageScale(array, x, y, scaleWidth, scaleHeight, transform)** Works the same as `DrawImage()` but adds scaling.  <br>
+- **Display.DrawImageScale(array, x, y, scaleWidth, scaleHeight, transform)** - Works the same as `DrawImage()` but adds scaling.  <br>
 **array:** Image array (see below). <br>
 **x:** x position on screen. <br>
 **y:** y position on screen. <br>
@@ -526,7 +526,7 @@ Transformation modifiers:
 
 This function takes raw bitmap image (32 bit), convert to new array with `ColorDepth` format internally, then send the new array data to device.
 
-- **Display.ShowBuffer(rawData, colorDepth)** Show 32 bit raw image data on screen<br>
+- **Display.ShowBuffer(rawData, colorDepth)** - Show 32 bit raw image data on screen<br>
 **rawData** Inout raw data. Must be 32 bit and alpha will be ignored <br>
 **ColorDepth:** This lets the stream know what is the format of the incoming data stream. B&W displays only support 1. Color displays support 4 (palette), 8, and 16 bits.
 

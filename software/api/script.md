@@ -2,16 +2,16 @@
 
 ---
 
-These methods allow developers to control DUE Scripts right from within Python, Javascript or .NET
+These methods allow developers to control DUE Scripts right from within Python, JavaScript or .NET
 
-- **Script.New()** Clears the program stored in flash <br>
-- **Script.Load(script)** Loads the line into internal buffer <br>
+- **Script.New()** - Clears the program stored in flash <br>
+- **Script.Load(script)** - Loads the line into internal buffer <br>
 **script:** Line to load into internal buffer <br>
-- **Script.Record()** Sends the internal buffer to the device, overwriting any previous programs <br>
-- **Script.Read()** Read the program stored in flash and return as string <br>
-- **Script.Execute(script)** Executes the single line of code immediately <br>
+- **Script.Record()** - Sends the internal buffer to the device, overwriting any previous programs <br>
+- **Script.Read()** - Read the program stored in flash and return as string <br>
+- **Script.Execute(script)** - Executes the single line of code immediately <br>
 **script:** Script to be executed<br>
-- **Script.Run()** Runs the program stored in flash  <br>
+- **Script.Run()** - Runs the program stored in flash  <br>
 
 > [!NOTE]
 > `Script.Run()` switches from immediate mode to run mode. Meaning, DUELink run by itself using the stored scripts in flash, no need host.

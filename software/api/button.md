@@ -18,7 +18,7 @@ This feature is not available on all pins. However, [Digital Read](digital.md) c
 **pin:** Pin number<br>
 **Returns:** True after release first time called. If called again returns false<br>
 
-- **bool Button.JustPressed(pin)** Checks if a button was pressed<br>
+- **bool Button.JustPressed(pin)** - Checks if a button was pressed<br>
 **pin:** Pin number<br>
 **Returns:** True if button was pressed recently and continues to return 1 until the button is released
 

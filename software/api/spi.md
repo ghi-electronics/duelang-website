@@ -2,19 +2,19 @@
 
 ---
 
-- **Spi.Write(arrayWrite, indexWrite, writeCount, chipselect)** Write data array to device <br>
+- **Spi.Write(arrayWrite, indexWrite, writeCount, chipselect)** - Write data array to device <br>
 **arrayWrite:** Array to send<br>
 **indexWrite:** Index of data in the array (optional) <br>
 **writeCount:** The number of bytes to write (optional) <br>
 **chipselect:** Chip select pin (optional) <br>
 
-- **Spi.Read(arrayRead, indexRead, readCount, chipselect)** Write data array to device <br>
+- **Spi.Read(arrayRead, indexRead, readCount, chipselect)** - Read data from device <br>
 **arrayRead:** Array to read<br>
 **indexRead:** Index of data in the array (optional)<br>
 **readCount:** The number of bytes to read (optional) <br>
 **chipselect:** Chip select pin (optional) <br>
 
-- **Spi.WriteRead(arrayWrite, indexWrite, writeCount, arrayRead, indexRead, readCount, chipselect)** Write data array to device <br>
+- **Spi.WriteRead(arrayWrite, indexWrite, writeCount, arrayRead, indexRead, readCount, chipselect)** - WriteRead data <br>
 **arrayWrite:** Array to send<br>
 **indexWrite:** Index of data in the array<br>
 **writeCount:** The number of bytes to write <br>
