@@ -24,6 +24,7 @@
 ## [LCD](api/lcd.md)
 ## [LED](api/led.md)
 ## [NeoPixel](api/neopixel.md)
+## [Pulse](api/pulse.md)
 ## [Script](api/script.md)
 ## [Servo](api/servo.md)
 ## [Sound](api/sound.md)

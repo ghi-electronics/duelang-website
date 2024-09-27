@@ -19,6 +19,7 @@ The DUELink core library provided for multiple languages (such as Python) gives 
 | [LCD](lcd.md)			| Draw on LCD (device specific) |
 | [LED](led.md)			| Control the on-board LED |
 | [NeoPixel](neopixel.md) | Control smart color LEDs |
+| [Pulse](pulse.md) | Generate pulse. Great for controlling stepper motors |
 | [Script](script.md) | Allows for expanding the system with custom scripts for advanced users |
 | [Servo](servo.md)		| Control servo motors |
 | [Sound](sound.md)		| Generate sound |
