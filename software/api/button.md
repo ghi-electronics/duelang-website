@@ -4,6 +4,9 @@
 
 The button feature makes it easier to work with buttons, when compared to reading a digital pin for example.
 
+This feature is not available on all pins. However, [Digital Read](digital.md) can be used instead, which is available on all pins. DUELink Spider supports `Button` on pins 1,2,3,4 plus buttons 'A' and 'B'.
+
+
 > [!TIP] 
 > The timeout for `Button Down` and `Button Up` are fixed to two seconds. Calling after two seconds from last press or release returns 0.
 
@@ -79,6 +82,4 @@ while (true) {
 }
 ```
 ---
-
-This feature is not available on all pins. However, [Digital Read](digital.md) can be used instead, which is available on all pins.
 
