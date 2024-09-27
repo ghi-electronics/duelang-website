@@ -20,7 +20,7 @@ Preview | Preview of the next release, not quite ready for production use.
 
 ## Firmware
 
-### SC13 (FEZ Flea, FEZ Pico, BrainPad Pulse)
+### SC13 (DUELink Spider, FEZ Flea/Pico, BrainPad Pulse)
 
 File | Date | Status
 --- | --- | ---
