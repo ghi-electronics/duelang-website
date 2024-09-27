@@ -2,7 +2,7 @@
 
 ---
 
-These methods allow developers to control DUE Scripts right from within Python, Javscript or .NET
+These methods allow developers to control DUE Scripts right from within Python, Javascript or .NET
 
 - **Script.New()** Clears the program stored in flash <br>
 - **Script.Load(script)** Loads the line into internal buffer <br>
