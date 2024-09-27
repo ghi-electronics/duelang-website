@@ -49,13 +49,11 @@ while (true) {
     let d = await duelink.Button.JustPressed('a')
     let u = await duelink.Button.JustReleased('a')
 
-    if (d)
-    {
+    if (d) {
         console.log("Button A down")
     }
 
-    if (u)
-    {
+    if (u) {
         console.log("Button A up")
     }
     await Util.sleep(200)
@@ -70,13 +68,11 @@ while (true) {
     var d = duelink.Button.JustPressed('a');
     var u = duelink.Button.JustReleased('a');
 
-    if (d)
-    {
+    if (d) {
         Console.WriteLine("Button A down");
     }
 
-    if (u)
-    {
+    if (u) {
         Console.WriteLine("Button A up");
     }
     Thread.Sleep(200);
