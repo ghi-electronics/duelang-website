@@ -4,7 +4,7 @@
 
 ![Python](../images/python.png)
 
-Python is the main language used with AI and data science. The provided DUELink Python library allows a full standard Python program to access physical world. For example, an AI vision facial recognition can now control a door lock.
+Python is the main language used with AI and data science. The provided DUELink Python library allows a full standard Python program to access the physical world. For example, an AI vision facial recognition can now control a door lock.
 
 ## Setup
 This page assumes the user is already familiar with Python and there is a development machine that is already setup to build and run Python programs. No changes are needed there but we are using Microsoft Visual Studio Code as a personal preference.
@@ -21,7 +21,7 @@ print("Hello DUELink!")
 We now need to install the DUE Python library `pip install DUELink`. The DUELink package will also install all required dependencies.
 
 > [!Tip]
-> The DUE python library requires pyserial, which may require an admin access to install.
+> The DUE python library requires pySerial, which may require an admin access to install.
 
 ## Blinky!
 Our first program will blink the on-board LED 20 times, where it turns on for 200ms and then it shuts off for 800ms.

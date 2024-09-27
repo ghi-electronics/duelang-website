@@ -68,7 +68,7 @@ This perfect marriage works on other single board computers, laptops, and phones
 
 [GHI Electronics](https://www.ghielectronics.com/) has been bridging the hardware-to-software gap for over 20 years. Our Michigan, USA headquarters is the center of our innovative engineering and quality manufacturing.
 
-**We are Where Hardware Meets Software!**
+**We are "Where Hardware Meets Software!"**
 
 
 > [!Video https://www.youtube.com/embed/ojJmKfdOpAI]

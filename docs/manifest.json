@@ -1,5 +1,5 @@
 {
-  "source_base_path": "F:/Brainpad/duelink-website",
+  "source_base_path": "C:/Users/gregn/source/repos/duelink-website",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -42,10 +42,30 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "hardware/display.md",
+      "output": {
+        ".html": {
+          "relative_path": "hardware/display.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "hardware/fez.md",
       "output": {
         ".html": {
           "relative_path": "hardware/fez.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "hardware/images/3pin-pinout.png",
+      "output": {
+        "resource": {
+          "relative_path": "hardware/images/3pin-pinout.png"
         }
       },
       "version": ""
@@ -252,6 +272,16 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "hardware/images/mikroe-click.png",
+      "output": {
+        "resource": {
+          "relative_path": "hardware/images/mikroe-click.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "hardware/images/pico-due-pinout.png",
       "output": {
         "resource": {
@@ -282,6 +312,26 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "hardware/images/qwiic-joystick.png",
+      "output": {
+        "resource": {
+          "relative_path": "hardware/images/qwiic-joystick.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "hardware/images/qwiic.png",
+      "output": {
+        "resource": {
+          "relative_path": "hardware/images/qwiic.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "hardware/images/smart-house-demo.jpg",
       "output": {
         "resource": {
@@ -291,21 +341,41 @@
       "version": ""
     },
     {
-      "type": "Conceptual",
-      "source_relative_path": "hardware/intro.md",
+      "type": "Resource",
+      "source_relative_path": "hardware/images/spider-connections.png",
       "output": {
-        ".html": {
-          "relative_path": "hardware/intro.html"
+        "resource": {
+          "relative_path": "hardware/images/spider-connections.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "hardware/images/stemma.png",
+      "output": {
+        "resource": {
+          "relative_path": "hardware/images/stemma.png"
         }
       },
       "version": ""
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "hardware/modules.md",
+      "source_relative_path": "hardware/interface.md",
       "output": {
         ".html": {
-          "relative_path": "hardware/modules.html"
+          "relative_path": "hardware/interface.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "hardware/led.md",
+      "output": {
+        ".html": {
+          "relative_path": "hardware/led.html"
         }
       },
       "version": ""
@@ -332,10 +402,10 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "hardware/threepins.md",
+      "source_relative_path": "hardware/threepin.md",
       "output": {
         ".html": {
-          "relative_path": "hardware/threepins.html"
+          "relative_path": "hardware/threepin.html"
         }
       },
       "version": ""
@@ -465,10 +535,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "images/hardware-options.png",
+      "source_relative_path": "images/how-it-works.png",
       "output": {
         "resource": {
-          "relative_path": "images/hardware-options.png"
+          "relative_path": "images/how-it-works.png"
         }
       },
       "version": ""
@@ -494,6 +564,36 @@
       "version": ""
     },
     {
+      "type": "Resource",
+      "source_relative_path": "images/python-vs-micropython.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/python-vs-micropython.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/rpi-strong.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/rpi-strong.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/spider-connections.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/spider-connections.png"
+        }
+      },
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "index.md",
       "output": {
@@ -505,10 +605,260 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "software/coding-options/coding-options.md",
+      "source_relative_path": "software/api/analog.md",
       "output": {
         ".html": {
-          "relative_path": "software/coding-options/coding-options.html"
+          "relative_path": "software/api/analog.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "software/api/bluetooth.md",
+      "output": {
+        ".html": {
+          "relative_path": "software/api/bluetooth.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "software/api/button.md",
+      "output": {
+        ".html": {
+          "relative_path": "software/api/button.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "software/api/can.md",
+      "output": {
+        ".html": {
+          "relative_path": "software/api/can.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "software/api/digital.md",
+      "output": {
+        ".html": {
+          "relative_path": "software/api/digital.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "software/api/distance.md",
+      "output": {
+        ".html": {
+          "relative_path": "software/api/distance.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "software/api/frequency.md",
+      "output": {
+        ".html": {
+          "relative_path": "software/api/frequency.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "software/api/i2c.md",
+      "output": {
+        ".html": {
+          "relative_path": "software/api/i2c.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "software/api/images/color-displays.png",
+      "output": {
+        "resource": {
+          "relative_path": "software/api/images/color-displays.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "software/api/images/ssd1306.png",
+      "output": {
+        "resource": {
+          "relative_path": "software/api/images/ssd1306.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "software/api/images/ssd1309.png",
+      "output": {
+        "resource": {
+          "relative_path": "software/api/images/ssd1309.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "software/api/images/st7735-portrait.png",
+      "output": {
+        "resource": {
+          "relative_path": "software/api/images/st7735-portrait.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "software/api/images/st7735.png",
+      "output": {
+        "resource": {
+          "relative_path": "software/api/images/st7735.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "software/api/infrared.md",
+      "output": {
+        ".html": {
+          "relative_path": "software/api/infrared.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "software/api/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "software/api/intro.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "software/api/lcd.md",
+      "output": {
+        ".html": {
+          "relative_path": "software/api/lcd.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "software/api/led.md",
+      "output": {
+        ".html": {
+          "relative_path": "software/api/led.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "software/api/neopixel.md",
+      "output": {
+        ".html": {
+          "relative_path": "software/api/neopixel.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "software/api/script.md",
+      "output": {
+        ".html": {
+          "relative_path": "software/api/script.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "software/api/servo.md",
+      "output": {
+        ".html": {
+          "relative_path": "software/api/servo.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "software/api/sound.md",
+      "output": {
+        ".html": {
+          "relative_path": "software/api/sound.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "software/api/spi.md",
+      "output": {
+        ".html": {
+          "relative_path": "software/api/spi.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "software/api/systemfunctions.md",
+      "output": {
+        ".html": {
+          "relative_path": "software/api/systemfunctions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "software/api/temp-humidity.md",
+      "output": {
+        ".html": {
+          "relative_path": "software/api/temp-humidity.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "software/api/touch.md",
+      "output": {
+        ".html": {
+          "relative_path": "software/api/touch.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "software/api/uart.md",
+      "output": {
+        ".html": {
+          "relative_path": "software/api/uart.html"
         }
       },
       "version": ""
@@ -539,6 +889,16 @@
       "output": {
         ".html": {
           "relative_path": "software/coding-options/excel.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "software/coding-options/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "software/coding-options/intro.html"
         }
       },
       "version": ""
@@ -585,16 +945,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "software/console.md",
-      "output": {
-        ".html": {
-          "relative_path": "software/console.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "software/downloads.md",
       "output": {
         ".html": {
@@ -605,490 +955,260 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "software/due-engine.md",
+      "source_relative_path": "software/engine/console.md",
       "output": {
         ".html": {
-          "relative_path": "software/due-engine.html"
+          "relative_path": "software/engine/console.html"
         }
       },
       "version": ""
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "software/due-script/corelib/analog.md",
+      "source_relative_path": "software/engine/intro.md",
       "output": {
         ".html": {
-          "relative_path": "software/due-script/corelib/analog.html"
+          "relative_path": "software/engine/intro.html"
         }
       },
       "version": ""
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "software/due-script/corelib/beep.md",
+      "source_relative_path": "software/engine/samples/basic.md",
       "output": {
         ".html": {
-          "relative_path": "software/due-script/corelib/beep.html"
+          "relative_path": "software/engine/samples/basic.html"
         }
       },
       "version": ""
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "software/due-script/corelib/button.md",
+      "source_relative_path": "software/engine/samples/falling-bird.md",
       "output": {
         ".html": {
-          "relative_path": "software/due-script/corelib/button.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "software/due-script/corelib/corelib.md",
-      "output": {
-        ".html": {
-          "relative_path": "software/due-script/corelib/corelib.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "software/due-script/corelib/digital.md",
-      "output": {
-        ".html": {
-          "relative_path": "software/due-script/corelib/digital.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "software/due-script/corelib/distance.md",
-      "output": {
-        ".html": {
-          "relative_path": "software/due-script/corelib/distance.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "software/due-script/corelib/frequency.md",
-      "output": {
-        ".html": {
-          "relative_path": "software/due-script/corelib/frequency.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "software/due-script/corelib/i2c.md",
-      "output": {
-        ".html": {
-          "relative_path": "software/due-script/corelib/i2c.html"
+          "relative_path": "software/engine/samples/falling-bird.html"
         }
       },
       "version": ""
     },
     {
       "type": "Resource",
-      "source_relative_path": "software/due-script/corelib/images/color-displays.png",
+      "source_relative_path": "software/engine/samples/images/analog-clock.gif",
       "output": {
         "resource": {
-          "relative_path": "software/due-script/corelib/images/color-displays.png"
+          "relative_path": "software/engine/samples/images/analog-clock.gif"
         }
       },
       "version": ""
     },
     {
       "type": "Resource",
-      "source_relative_path": "software/due-script/corelib/images/ssd1306.png",
+      "source_relative_path": "software/engine/samples/images/braingamer-pong.gif",
       "output": {
         "resource": {
-          "relative_path": "software/due-script/corelib/images/ssd1306.png"
+          "relative_path": "software/engine/samples/images/braingamer-pong.gif"
         }
       },
       "version": ""
     },
     {
       "type": "Resource",
-      "source_relative_path": "software/due-script/corelib/images/ssd1309.png",
+      "source_relative_path": "software/engine/samples/images/braingamer-sketch.gif",
       "output": {
         "resource": {
-          "relative_path": "software/due-script/corelib/images/ssd1309.png"
+          "relative_path": "software/engine/samples/images/braingamer-sketch.gif"
         }
       },
       "version": ""
     },
     {
       "type": "Resource",
-      "source_relative_path": "software/due-script/corelib/images/st7735-portrait.png",
+      "source_relative_path": "software/engine/samples/images/color-sine-wave.gif",
       "output": {
         "resource": {
-          "relative_path": "software/due-script/corelib/images/st7735-portrait.png"
+          "relative_path": "software/engine/samples/images/color-sine-wave.gif"
         }
       },
       "version": ""
     },
     {
       "type": "Resource",
-      "source_relative_path": "software/due-script/corelib/images/st7735.png",
+      "source_relative_path": "software/engine/samples/images/falling-bird.gif",
       "output": {
         "resource": {
-          "relative_path": "software/due-script/corelib/images/st7735.png"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "software/due-script/corelib/infrared.md",
-      "output": {
-        ".html": {
-          "relative_path": "software/due-script/corelib/infrared.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "software/due-script/corelib/lcd.md",
-      "output": {
-        ".html": {
-          "relative_path": "software/due-script/corelib/lcd.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "software/due-script/corelib/led.md",
-      "output": {
-        ".html": {
-          "relative_path": "software/due-script/corelib/led.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "software/due-script/corelib/neopixel.md",
-      "output": {
-        ".html": {
-          "relative_path": "software/due-script/corelib/neopixel.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "software/due-script/corelib/servo.md",
-      "output": {
-        ".html": {
-          "relative_path": "software/due-script/corelib/servo.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "software/due-script/corelib/spi.md",
-      "output": {
-        ".html": {
-          "relative_path": "software/due-script/corelib/spi.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "software/due-script/corelib/systemfunctions.md",
-      "output": {
-        ".html": {
-          "relative_path": "software/due-script/corelib/systemfunctions.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "software/due-script/corelib/temp-humidity.md",
-      "output": {
-        ".html": {
-          "relative_path": "software/due-script/corelib/temp-humidity.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "software/due-script/corelib/touch.md",
-      "output": {
-        ".html": {
-          "relative_path": "software/due-script/corelib/touch.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "software/due-script/corelib/uart.md",
-      "output": {
-        ".html": {
-          "relative_path": "software/due-script/corelib/uart.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "software/due-script/due-script.md",
-      "output": {
-        ".html": {
-          "relative_path": "software/due-script/due-script.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "software/due-script/samples/basic.md",
-      "output": {
-        ".html": {
-          "relative_path": "software/due-script/samples/basic.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "software/due-script/samples/falling-bird.md",
-      "output": {
-        ".html": {
-          "relative_path": "software/due-script/samples/falling-bird.html"
+          "relative_path": "software/engine/samples/images/falling-bird.gif"
         }
       },
       "version": ""
     },
     {
       "type": "Resource",
-      "source_relative_path": "software/due-script/samples/images/analog-clock.gif",
+      "source_relative_path": "software/engine/samples/images/neopixel-16x16.png",
       "output": {
         "resource": {
-          "relative_path": "software/due-script/samples/images/analog-clock.gif"
+          "relative_path": "software/engine/samples/images/neopixel-16x16.png"
         }
       },
       "version": ""
     },
     {
       "type": "Resource",
-      "source_relative_path": "software/due-script/samples/images/braingamer-pong.gif",
+      "source_relative_path": "software/engine/samples/images/neopixel-back.jpg",
       "output": {
         "resource": {
-          "relative_path": "software/due-script/samples/images/braingamer-pong.gif"
+          "relative_path": "software/engine/samples/images/neopixel-back.jpg"
         }
       },
       "version": ""
     },
     {
       "type": "Resource",
-      "source_relative_path": "software/due-script/samples/images/braingamer-sketch.gif",
+      "source_relative_path": "software/engine/samples/images/neopixel-frame.jpg",
       "output": {
         "resource": {
-          "relative_path": "software/due-script/samples/images/braingamer-sketch.gif"
+          "relative_path": "software/engine/samples/images/neopixel-frame.jpg"
         }
       },
       "version": ""
     },
     {
       "type": "Resource",
-      "source_relative_path": "software/due-script/samples/images/color-sine-wave.gif",
+      "source_relative_path": "software/engine/samples/images/pulse-bounce.gif",
       "output": {
         "resource": {
-          "relative_path": "software/due-script/samples/images/color-sine-wave.gif"
+          "relative_path": "software/engine/samples/images/pulse-bounce.gif"
         }
       },
       "version": ""
     },
     {
       "type": "Resource",
-      "source_relative_path": "software/due-script/samples/images/falling-bird.gif",
+      "source_relative_path": "software/engine/samples/images/pulse-falling-bird.gif",
       "output": {
         "resource": {
-          "relative_path": "software/due-script/samples/images/falling-bird.gif"
+          "relative_path": "software/engine/samples/images/pulse-falling-bird.gif"
         }
       },
       "version": ""
     },
     {
       "type": "Resource",
-      "source_relative_path": "software/due-script/samples/images/neopixel-16x16.png",
+      "source_relative_path": "software/engine/samples/images/rainbow.jpg",
       "output": {
         "resource": {
-          "relative_path": "software/due-script/samples/images/neopixel-16x16.png"
+          "relative_path": "software/engine/samples/images/rainbow.jpg"
         }
       },
       "version": ""
     },
     {
       "type": "Resource",
-      "source_relative_path": "software/due-script/samples/images/neopixel-back.jpg",
+      "source_relative_path": "software/engine/samples/images/rotary-neopixel.gif",
       "output": {
         "resource": {
-          "relative_path": "software/due-script/samples/images/neopixel-back.jpg"
+          "relative_path": "software/engine/samples/images/rotary-neopixel.gif"
         }
       },
       "version": ""
     },
     {
       "type": "Resource",
-      "source_relative_path": "software/due-script/samples/images/neopixel-frame.jpg",
+      "source_relative_path": "software/engine/samples/images/sine-wave.gif",
       "output": {
         "resource": {
-          "relative_path": "software/due-script/samples/images/neopixel-frame.jpg"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "software/due-script/samples/images/pulse-bounce.gif",
-      "output": {
-        "resource": {
-          "relative_path": "software/due-script/samples/images/pulse-bounce.gif"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "software/due-script/samples/images/pulse-falling-bird.gif",
-      "output": {
-        "resource": {
-          "relative_path": "software/due-script/samples/images/pulse-falling-bird.gif"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "software/due-script/samples/images/rainbow.jpg",
-      "output": {
-        "resource": {
-          "relative_path": "software/due-script/samples/images/rainbow.jpg"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "software/due-script/samples/images/rotary-neopixel.gif",
-      "output": {
-        "resource": {
-          "relative_path": "software/due-script/samples/images/rotary-neopixel.gif"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "software/due-script/samples/images/sine-wave.gif",
-      "output": {
-        "resource": {
-          "relative_path": "software/due-script/samples/images/sine-wave.gif"
+          "relative_path": "software/engine/samples/images/sine-wave.gif"
         }
       },
       "version": ""
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "software/due-script/samples/neopixel-matrix.md",
+      "source_relative_path": "software/engine/samples/neopixel-matrix.md",
       "output": {
         ".html": {
-          "relative_path": "software/due-script/samples/neopixel-matrix.html"
+          "relative_path": "software/engine/samples/neopixel-matrix.html"
         }
       },
       "version": ""
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "software/due-script/samples/pulse-analogclock.md",
+      "source_relative_path": "software/engine/samples/pulse-analogclock.md",
       "output": {
         ".html": {
-          "relative_path": "software/due-script/samples/pulse-analogclock.html"
+          "relative_path": "software/engine/samples/pulse-analogclock.html"
         }
       },
       "version": ""
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "software/due-script/samples/pulse-bouncingball.md",
+      "source_relative_path": "software/engine/samples/pulse-bouncingball.md",
       "output": {
         ".html": {
-          "relative_path": "software/due-script/samples/pulse-bouncingball.html"
+          "relative_path": "software/engine/samples/pulse-bouncingball.html"
         }
       },
       "version": ""
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "software/due-script/samples/pulse-falling-bird.md",
+      "source_relative_path": "software/engine/samples/pulse-falling-bird.md",
       "output": {
         ".html": {
-          "relative_path": "software/due-script/samples/pulse-falling-bird.html"
+          "relative_path": "software/engine/samples/pulse-falling-bird.html"
         }
       },
       "version": ""
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "software/due-script/samples/pulse-gamer-pong.md",
+      "source_relative_path": "software/engine/samples/pulse-gamer-pong.md",
       "output": {
         ".html": {
-          "relative_path": "software/due-script/samples/pulse-gamer-pong.html"
+          "relative_path": "software/engine/samples/pulse-gamer-pong.html"
         }
       },
       "version": ""
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "software/due-script/samples/pulse-gamer-sketch.md",
+      "source_relative_path": "software/engine/samples/pulse-gamer-sketch.md",
       "output": {
         ".html": {
-          "relative_path": "software/due-script/samples/pulse-gamer-sketch.html"
+          "relative_path": "software/engine/samples/pulse-gamer-sketch.html"
         }
       },
       "version": ""
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "software/due-script/samples/rotary-neopixel.md",
+      "source_relative_path": "software/engine/samples/rotary-neopixel.md",
       "output": {
         ".html": {
-          "relative_path": "software/due-script/samples/rotary-neopixel.html"
+          "relative_path": "software/engine/samples/rotary-neopixel.html"
         }
       },
       "version": ""
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "software/due-script/samples/samples.md",
+      "source_relative_path": "software/engine/script.md",
       "output": {
         ".html": {
-          "relative_path": "software/due-script/samples/samples.html"
+          "relative_path": "software/engine/script.html"
         }
       },
       "version": ""
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "software/due-script/streams.md",
+      "source_relative_path": "software/engine/streams.md",
       "output": {
         ".html": {
-          "relative_path": "software/due-script/streams.html"
+          "relative_path": "software/engine/streams.html"
         }
       },
       "version": ""

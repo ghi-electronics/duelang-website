@@ -3,7 +3,7 @@
 ---
 
 - **Can.Initialize(baudrate)** - Initialize CAN with special baudrate <br>
-**baudrate:**  Accept 125000, 250000, 500000, 1000000 <br>
+**baudrate:**  Accepts 125000, 250000, 500000, 1000000 <br>
 
 - **Can.InitializeExt(phase1, phase2, prescaler, synchronizationJumpWidth)** - User defined baudrate. Max 1000000 (1Mbs)  <br>
 **phase1**: Phase 1 timing <br>

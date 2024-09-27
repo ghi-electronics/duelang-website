@@ -40,7 +40,7 @@ Console.WriteLine(x);
 ---
 
 ## Digital Write
-Sets a pin digital output.
+Sets a pin's digital output.
 
 - **Digital.Write(pin, state)** <br>
 **pin:** pin number <br> 

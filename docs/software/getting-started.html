@@ -91,71 +91,157 @@
 <div style="text-align: center;">
 <p><img src="images/getting-started.png" alt="Host Mode"></p>
 </div>
-<h2 id="hardware-selection">Hardware Selection</h2>
-<p>The first step is to pick from one of the many available <a href="../hardware/intro.html">DUE Hardware</a> options.</p>
-<p>Follow the hardware instructions to load the latest DUE Link firmware onto your device.</p>
-<h2 id="start-coding">Start Coding</h2>
-<p>There are multiple langues can be used to comminucate with DUELink controller.</p>
+<h2 id="hardware-setup">Hardware Setup</h2>
+<p>Make sure your DUELink hardware is functional using <a href="https://demo.duelink.com/">demo.duelink.com</a>. Check that the board has the latest firmware. Compare the version  shown on the demo page when the device is connected to the version found on the <a href="downloads.html">Downloads</a> page.</p>
+<hr>
+<h2 id="software-setup">Software Setup</h2>
+<p>DUELink is made for software developers so we are assuming you already have a development machine that is already building Python or JavaScrpt programs for example. See the <a href="coding-options/intro.html">Coding Options</a> to see the available options and install the available libraries.</p>
 <hr>
 <h2 id="blink-led">Blink LED</h2>
-<p>Assuming you already have hardware and the board is loaded with the latest firmware, We will start by blinking an LED on different langues.</p>
+<p>Following one of the available <a href="coding-options/intro.html">Coding Options</a> will reveal all the needed steps to blink the on-board LED using the LED API, which handles the LED internally inside the DUELink Engine. Here is a similar example but this one uses a loop on the host side to set the LED high and low.</p>
 <div class="tabGroup" id="tabgroup_1">
 <ul role="tablist">
 <li role="presentation">
-<a href="#tabpanel_1_python" role="tab" aria-controls="tabpanel_1_python" data-tab="python" tabindex="0" aria-selected="true">Python</a>
+<a href="#tabpanel_1_py" role="tab" aria-controls="tabpanel_1_py" data-tab="py" tabindex="0" aria-selected="true">Python</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_1_js" role="tab" aria-controls="tabpanel_1_js" data-tab="js" tabindex="-1">JavaScript</a>
 </li>
 <li role="presentation">
 <a href="#tabpanel_1_net" role="tab" aria-controls="tabpanel_1_net" data-tab="net" tabindex="-1">.NET</a>
 </li>
-<li role="presentation">
-<a href="#tabpanel_1_javascript" role="tab" aria-controls="tabpanel_1_javascript" data-tab="javascript" tabindex="-1">JavaScript</a>
-</li>
 </ul>
-<section id="tabpanel_1_python" role="tabpanel" data-tab="python">
+<section id="tabpanel_1_py" role="tabpanel" data-tab="py">
 
-<pre><code>from DUELink.DUELinkController import DUELinkController
+<pre><code class="lang-py">from DUELink.DUELinkController import DUELinkController
 import time
 
 availablePort = DUELinkController.GetConnectionPort()
-due = DUELinkController(availablePort)
+duelink = DUELinkController(availablePort)
 
 while True:
-    due.Led.Set(1,0,0)
+    duelink.Led.Set(1,0,0)
     time.sleep(0.5)
-    due.Led.Set(0,1,0)
+    duelink.Led.Set(0,1,0)
     time.sleep(0.5)
+</code></pre>
+</section>
+<section id="tabpanel_1_js" role="tabpanel" data-tab="js" aria-hidden="true" hidden="hidden">
+
+<pre><code class="lang-js">import {SerialUSB} from './serialusb.js';
+import * as DUELink from './duelink.js';
+import { Util } from &quot;./util.js&quot;;
+
+let duelink = new DUELink.DUELinkController(new SerialUSB());
+await due.Connect();
+
+while (true){
+	await duelink.Led.Set(1, 0, 0)
+	await Util.sleep(500)
+	await duelink.Led.Set(0, 1, 0)
+	await Util.sleep(500)
+}
 </code></pre>
 </section>
 <section id="tabpanel_1_net" role="tabpanel" data-tab="net" aria-hidden="true" hidden="hidden">
 
-<pre><code>
-var availablePort = DUELinkController.GetConnectionPort();
-var due = new DUELinkController(availablePort);
+<pre><code class="lang-cs">var availablePort = DUELinkController.GetConnectionPort();
+var duelink = new DUELinkController(availablePort);
  
 while (true) {
-	due.Led.Set(1, 0, 0);
+	duelink.Led.Set(1, 0, 0);
 	Thread.Sleep(500);
-	due.Led.Set(0, 1, 0);
+	duelink.Led.Set(0, 1, 0);
 	Thread.Sleep(500);
 }
 </code></pre>
 </section>
-<section id="tabpanel_1_javascript" role="tabpanel" data-tab="javascript" aria-hidden="true" hidden="hidden">
+</div>
+<hr>
+<h2 id="special-pins">Special Pins</h2>
+<p>Boards may include on-board features that can be accessed through the API.</p>
+<table>
+<thead>
+<tr>
+<th>Pin &quot;number&quot;</th>
+<th>On-board Feature</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>'a' or 'A'</td>
+<td>Button A</td>
+</tr>
+<tr>
+<td>'b' or 'B'</td>
+<td>Button B</td>
+</tr>
+<tr>
+<td>'p' or 'P'</td>
+<td>Piezo buzzer</td>
+</tr>
+<tr>
+<td>'l' or 'L'</td>
+<td>LED</td>
+</tr>
+</tbody>
+</table>
+<p>This is an example of how to blink the on-board LED using the <a href="api/digital.html">Digital</a> class.</p>
+<div class="tabGroup" id="tabgroup_2">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_2_py" role="tab" aria-controls="tabpanel_2_py" data-tab="py" tabindex="0" aria-selected="true">Python</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_2_js" role="tab" aria-controls="tabpanel_2_js" data-tab="js" tabindex="-1">JavaScript</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_2_net" role="tab" aria-controls="tabpanel_2_net" data-tab="net" tabindex="-1">.NET</a>
+</li>
+</ul>
+<section id="tabpanel_2_py" role="tabpanel" data-tab="py">
 
-<pre><code>import {SerialUSB} from './serialusb.js';
-import * as due from './duelink.js';
+<pre><code class="lang-py">from DUELink.DUELinkController import DUELinkController
+import time
+
+availablePort = DUELinkController.GetConnectionPort()
+duelink = DUELinkController(availablePort)
+
+while True:
+    duelink.Digital.Write('l', 1)
+    time.sleep(0.5)
+    duelink.Digital.Write('l', 0)
+    time.sleep(0.5)
+</code></pre>
+</section>
+<section id="tabpanel_2_js" role="tabpanel" data-tab="js" aria-hidden="true" hidden="hidden">
+
+<pre><code class="lang-js">import {SerialUSB} from './serialusb.js';
+import * as DUELink from './duelink.js';
 import { Util } from &quot;./util.js&quot;;
 
-let due = new due.DUELinkController(new SerialUSB());
-await due.Connect();
+let duelink = new DUELink.DUELinkController(new SerialUSB());
+await duelink.Connect();
 
-while (true) {
-	await due.Led.Set(1, 0, 0)
+while (true){
+	await duelink.Digital.Write('l', 1)
 	await Util.sleep(500)
-	await due.Led.Set(0, 1, 0)
+	await duelink.Digital.Write('l', 0)
 	await Util.sleep(500)
 }
+</code></pre>
+</section>
+<section id="tabpanel_2_net" role="tabpanel" data-tab="net" aria-hidden="true" hidden="hidden">
 
+<pre><code class="lang-cs">var availablePort = DUELinkController.GetConnectionPort();
+var duelink = new DUELinkController(availablePort);
+ 
+while (true) {
+	duelink.Digital.Write('l', 1);
+	Thread.Sleep(500);
+	duelink.Digital.Write('l', 0);
+	Thread.Sleep(500);
+}
 </code></pre>
 </section>
 </div>

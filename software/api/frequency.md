@@ -19,8 +19,7 @@ This example will do a loop that generates 20Hz tp 1000Hz after every 200ms.
 while True:
     for x in range(20, 1000):
         duelink.Frequency.Write('p', x, 200, 50)
-        time.sleep(0.2)
-    
+        time.sleep(0.2)   
 ```
 
 ## [JavaScript](#tab/js)

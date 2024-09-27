@@ -92,9 +92,7 @@ while (true) {
 	let x = await duelink.Analog.Read(0)
 	console.log(x)
 	await Util.sleep(100)
-
 }
-
 ```
 
 ### [.NET](#tab/net)
