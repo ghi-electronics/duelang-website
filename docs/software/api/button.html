@@ -89,22 +89,23 @@
 
 <hr>
 <p>The button feature makes it easier to work with buttons, when compared to reading a digital pin for example.</p>
+<p>This feature is not available on all pins. However, <a href="digital.html">Digital Read</a> can be used instead, which is available on all pins. DUELink Spider supports <code>Button</code> on pins 1,2,3,4 plus buttons 'A' and 'B'.</p>
 <div class="TIP">
 <h5>Tip</h5>
 <p>The timeout for <code>Button Down</code> and <code>Button Up</code> are fixed to two seconds. Calling after two seconds from last press or release returns 0.</p>
 </div>
 <ul>
 <li><p><strong>Button.Enable(pin, enable)</strong> - Activates a pin to be used as a button<br>
-<strong>pin:</strong> pin number<br>
-<strong>enable:</strong> true = enable, false = disabled  <br></p>
+<strong>pin:</strong> Pin number<br>
+<strong>enable:</strong> True = enable, false = disabled  <br></p>
 </li>
 <li><p><strong>Button.JustReleased(pin)</strong> <br>
-<strong>pin:</strong> pin number<br>
-<strong>Returns:</strong> true after release first time called. If called again returns false<br></p>
+<strong>pin:</strong> Pin number<br>
+<strong>Returns:</strong> True after release first time called. If called again returns false<br></p>
 </li>
 <li><p><strong>bool Button.JustPressed(pin)</strong> Checks if a button was pressed<br>
-<strong>pin:</strong> pin number<br>
-<strong>Returns:</strong> true if button was pressed recently and continues to return 1 until the button is released</p>
+<strong>pin:</strong> Pin number<br>
+<strong>Returns:</strong> True if button was pressed recently and continues to return 1 until the button is released</p>
 </li>
 </ul>
 <p>This example checks button 'a'.</p>
@@ -145,13 +146,11 @@ while (true) {
     let d = await duelink.Button.JustPressed('a')
     let u = await duelink.Button.JustReleased('a')
 
-    if (d)
-    {
+    if (d) {
         console.log(&quot;Button A down&quot;)
     }
 
-    if (u)
-    {
+    if (u) {
         console.log(&quot;Button A up&quot;)
     }
     await Util.sleep(200)
@@ -166,13 +165,11 @@ while (true) {
     var d = duelink.Button.JustPressed('a');
     var u = duelink.Button.JustReleased('a');
 
-    if (d)
-    {
+    if (d) {
         Console.WriteLine(&quot;Button A down&quot;);
     }
 
-    if (u)
-    {
+    if (u) {
         Console.WriteLine(&quot;Button A up&quot;);
     }
     Thread.Sleep(200);
@@ -180,8 +177,6 @@ while (true) {
 </code></pre>
 </section>
 </div>
-
-<p>This feature is not available on all pins. However, <a href="digital.html">Digital Read</a> can be used instead, which is available on all pins.</p>
 
 </article>
 

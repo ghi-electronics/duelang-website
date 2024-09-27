@@ -103,19 +103,19 @@
 <p>We are now ready to bring in the <a href="https://github.com/ghi-electronics/due-libraries">DUELink JavaScript library</a> using <code>npm install DUELink</code>. However, the library is not NPM hosted yet and can be downloaded from here <a href="https://github.com/ghi-electronics/due-libraries/tree/main/javascript">https://github.com/ghi-electronics/due-libraries/tree/main/javascript</a>. Download and save duelink.js, util.js, and serialusb.js your program's local folder. Finally, install SerialPort library using <code>npm install serialport</code>.</p>
 <p>We can now instantiate and get the DUELink controller ready. We will be using SerialUSB() here. If using a web browser, use WebSerial() instead.</p>
 <h2 id="blinky">Blinky!</h2>
-<p>Our first program will blink the on-board LED 20 times, where it comes on for 200ms and then it is off for 800ms.</p>
+<p>Our first program will blink the on-board on for 200ms then it shuts off for 800ms, and does this 20 times.</p>
 <pre><code class="lang-js">import {SerialUSB} from './serialusb.js';
 import * as DUELink from './duelink.js';
 
 let duelink = new DUELink.DUELinkController(new SerialUSB());
 await duelink.Connect();
 
-// Flash the LED 20 times (on for 200ms and off for 800ms)
+// Flash the LED  (on for 200ms, off for 800ms, 20 times)
 await duelink.Led.Set(200,800,20);
 </code></pre>
 <h2 id="javascript-api">JavaScript API</h2>
 <p>The <a href="../api/intro.html">API</a> page includes all details and examples to use all the available &quot;physical world&quot; services.</p>
-<p>Use the above example program to initiate the hardware, instantiate the <code>duelink</code> object, and then use any of the available APIs, such as `duelink.Sound.Beep('p', 500, 1000)' to generate a one second 500Hz beep using the on-board peizo buzzer.</p>
+<p>Use the above example program to initiate the hardware, instantiate the <code>duelink</code> object, and then use any of the available APIs, such as `duelink.Sound.Beep('p', 500, 1000)' to generate a beep using the on-board peizo buzzer with a frequency of 500Hz for 1000ms</p>
 
 </article>
 

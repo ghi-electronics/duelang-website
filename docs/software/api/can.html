@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Controller Area Network (CAN) </title>
+      <title>CAN </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Controller Area Network (CAN) ">
+      <meta name="title" content="CAN ">
       
       
       <link rel="icon" href="../../images/favicon.ico">
@@ -85,7 +85,7 @@
         </div>
 
         <article data-uid="">
-<h1 id="controller-area-network-can">Controller Area Network (CAN)</h1>
+<h1 id="can">CAN</h1>
 
 <hr>
 <ul>
@@ -93,10 +93,10 @@
 <strong>baudrate:</strong>  Accepts 125000, 250000, 500000, 1000000 <br></p>
 </li>
 <li><p><strong>Can.InitializeExt(phase1, phase2, prescaler, synchronizationJumpWidth)</strong> - User defined baudrate. Max 1000000 (1Mbs)  <br>
-<strong>phase1</strong>: Phase 1 timing <br>
-<strong>phase2</strong>: Phase 2 timing <br>
-<strong>prescaler</strong>: Baudrate prescaler <br>
-<strong>synchronizationJumpWidth</strong>: synchronization jump width <br></p>
+<strong>phase1</strong>: Time segment 1. Max is 15 <br>
+<strong>phase2</strong>: Time segment 2. Max is 7 <br>
+<strong>prescaler</strong>: Baudrate prescaler, this value defines the length of a time quanta. Max is 1023 <br>
+<strong>synchronizationJumpWidth</strong>: Synchronization jump width. Max is 3 <br></p>
 </li>
 <li><p><strong>Can.Available()</strong> - Count  <br>
 <strong>Returns:</strong> How many messages have been buffered and ready to be read</p>
@@ -108,6 +108,10 @@
 <strong>Return:</strong> Message from CAN</p>
 </li>
 </ul>
+<div class="NOTE">
+<h5>Note</h5>
+<p>CAN peripheral clock is 80MHz</p>
+</div>
 <h2 id="canmessage">CanMessage</h2>
 <p>To send or received a message, CanMessage class is used</p>
 <ul>
@@ -148,7 +152,6 @@ while True :
         duelink.Can.Write(message)
     
     time.sleep(1)
-
 </code></pre>
 <div class="TIP">
 <h5>Tip</h5>
@@ -160,10 +163,8 @@ while True :
 
 <pre><code class="lang-js">await duelink.Can.Initialize(500000)
 
-while (true) 
-{
-    if (await duelink.Can.Available() &gt; 0)
-    {
+while (true) {
+    if (await duelink.Can.Available() &gt; 0){
         let message = await duelink.Can.Read()
        
         // print received message detail
@@ -175,7 +176,6 @@ while (true)
         // send back to sender
         await duelink.Can.Write(message)
     }
-
     await Util.sleep(1000)
 }
 </code></pre>
@@ -189,10 +189,8 @@ while (true)
 
 <pre><code class="lang-cs">duelink.Can.Initialize(500000);
 
-while (true) 
-{
-    if (duelink.Can.Available() &gt; 0)
-    {
+while (true) {
+    if (duelink.Can.Available() &gt; 0){
         var message = duelink.Can.Read();
 
         // print received message detail
@@ -204,7 +202,6 @@ while (true)
         // send back to sender
         duelink.Can.Write(message);
     }
-
     Thread.Sleep(1000);
 }
 </code></pre>

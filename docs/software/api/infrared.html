@@ -90,11 +90,11 @@
 <hr>
 <p>IR decoder is fixed to pin 2 and 8.</p>
 <ul>
-<li><p><strong>Infrared.Enable(pin, enable)</strong> - enables pin for IR signal capture <br>
-<strong>pin:</strong> pin number <br>
-<strong>enable:</strong> true = enable, false = disable <br></p>
+<li><p><strong>Infrared.Enable(pin, enable)</strong> - Enables pin for IR signal capture <br>
+<strong>pin:</strong> Pin number <br>
+<strong>enable:</strong> True = enable, false = disable <br></p>
 </li>
-<li><p><strong>Infrared.Read()</strong> - reads the value from the IR enabled pin <br>
+<li><p><strong>Infrared.Read()</strong> - Reads the value from the IR enabled pin <br>
 <strong>Return:</strong> Tracks the past 16 key presses and returns them. -1 if none.</p>
 </li>
 </ul>
@@ -121,22 +121,19 @@ while True:
         print (x)
         
     time.sleep(1)
-
 </code></pre>
 </section>
 <section id="tabpanel_1_js" role="tabpanel" data-tab="js" aria-hidden="true" hidden="hidden">
 
 <pre><code class="lang-js">await duelink.Infrared.Enable(2, true)
 
-while (true)
-{
+while (true){
     let x = await duelink.Infrared.Read()
 
     if (x &gt;=0)                
         console.log(x)
 
-     await Util.sleep(1000)
-                
+     await Util.sleep(1000)               
 }
 </code></pre>
 </section>
@@ -144,15 +141,13 @@ while (true)
 
 <pre><code class="lang-cs">duelink.Infrared.Enable(2, true);
 
-while (true)
-{
+while (true){
     var x = duelink.Infrared.Read();
 
     if (x &gt;=0)                
         Console.WriteLine(x);
 
-    Thread.Sleep(1000);
-                
+    Thread.Sleep(1000);                
 }
 </code></pre>
 </section>
