@@ -20,7 +20,7 @@ Start a new project with a simple line of code to test out the project is runnin
 console.log("Hello World");
 ```
 
-We are now ready to bring in the [DUELink JavaScript library](https://github.com/ghi-electronics/due-libraries) using `npm install DUELink`. However, the library is not NPM hosted yet and can be downloaded from here https://github.com/ghi-electronics/due-libraries/tree/main/javascript. Download and save duelink.js, util.js, and serialusb.js your program's local folder. Finally, install SerialPort library using `npm install serialport`.
+We are now ready to bring in the DUELink JavaScript library from https://github.com/ghi-electronics/due-libraries/tree/main/javascript. Download and save duelink.js, util.js, and serialusb.js your program's local folder. Finally, install SerialPort library using `npm install serialport`.
 
 We can now instantiate and get the DUELink controller ready. We will be using SerialUSB() here. If using a web browser, use WebSerial() instead.
 
