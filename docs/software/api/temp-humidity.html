@@ -91,12 +91,12 @@
 <p>Works with the DHT line of low-cost temperature &amp; humidity sensors.</p>
 <ul>
 <li><p><strong>Temperature.Read(pin, type)</strong> - Reads sensor temperature data on connected pin <br>
-<strong>pin:</strong> pin number <br>
+<strong>pin:</strong> Pin number <br>
 <strong>type:</strong> DHT11 = 11, DHT12 = 12, DHT22 = 22, DHT21 = 21 <br>
 <strong>Returns:</strong> Temperature in Celsius.</p>
 </li>
 <li><p><strong>Humidity.Read(pin, type)</strong> - Reads sensor humidity data on connected pin <br>
-<strong>pin:</strong> pin number <br>
+<strong>pin:</strong> Pin number <br>
 <strong>type:</strong> DHT11 = 11, DHT12 = 12, DHT22 = 22, DHT21 = 21 <br>
 <strong>Returns:</strong> Humidity level 0 to 100.</p>
 </li>
@@ -125,8 +125,7 @@
 </section>
 <section id="tabpanel_1_js" role="tabpanel" data-tab="js" aria-hidden="true" hidden="hidden">
 
-<pre><code class="lang-basic">while (true)
-{
+<pre><code class="lang-basic">while (true){
     console.log(await duelink.Humidity.Read(0, 11))
     console.log(await duelink.Temperature.Read(0, 11))
 
@@ -136,8 +135,7 @@
 </section>
 <section id="tabpanel_1_net" role="tabpanel" data-tab="net" aria-hidden="true" hidden="hidden">
 
-<pre><code class="lang-basic">while (true)
-{
+<pre><code class="lang-basic">while (true){
     Console.WriteLine(duelink.Humidity.Read(0, 11));
     Console.WriteLine(duelink.Temperature.Read(0, 11));
 

@@ -91,7 +91,7 @@
 <p>This feature allows sensing of a finger or human touch to a pin, or when using a touch screen, use 'x' or 'y' to return the x &amp; y positions where the screen is being touched.</p>
 <ul>
 <li><strong>Touch.Read(pin)</strong> - Read pin for touch, or reads the x y position on a touch screen   <br>
-<strong>pin:</strong> pin number, 'x', or 'y' <br>
+<strong>pin:</strong> Pin number, 'x', or 'y' <br>
 <strong>pin Returns:</strong> 0 = pin not touched, 1 = pin touched <br>
 <strong>x or y Returns:</strong>  -1 = screen not touched, x position , y position</li>
 </ul>
@@ -117,13 +117,11 @@
         print(&quot;touched&quot;)
                 
     time.sleep(0.1)
-
 </code></pre>
 </section>
 <section id="tabpanel_1_js" role="tabpanel" data-tab="js" aria-hidden="true" hidden="hidden">
 
-<pre><code class="lang-js">while (true)
-{
+<pre><code class="lang-js">while (true){
     let touched = await duelink.Touch.Read(6)
 
     if (touched)
@@ -135,8 +133,7 @@
 </section>
 <section id="tabpanel_1_net" role="tabpanel" data-tab="net" aria-hidden="true" hidden="hidden">
 
-<pre><code class="lang-cs">while (true)
-{
+<pre><code class="lang-cs">while (true){
     var touched = duelink.Touch.Read(6);
 
     if (touched)

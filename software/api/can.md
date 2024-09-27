@@ -6,10 +6,10 @@
 **baudrate:**  Accepts 125000, 250000, 500000, 1000000 <br>
 
 - **Can.InitializeExt(phase1, phase2, prescaler, synchronizationJumpWidth)** - User defined baudrate. Max 1000000 (1Mbs)  <br>
-**phase1**: Phase 1 timing <br>
-**phase2**: Phase 2 timing <br>
-**prescaler**: Baudrate prescaler <br>
-**synchronizationJumpWidth**: Synchronization jump width <br>
+**phase1**: Time segment 1. Max is 15 <br>
+**phase2**: Time segment 2. Max is 7 <br>
+**prescaler**: Baudrate prescaler, this value defines the length of a time quanta. Max is 1023 <br>
+**synchronizationJumpWidth**: Synchronization jump width. Max is 3 <br>
 
 - **Can.Available()** - Count  <br>
 **Returns:** How many messages have been buffered and ready to be read
@@ -19,6 +19,9 @@
 
 - **Can.Read()** - Read message <br>
 **Return:** Message from CAN
+
+> [!NOTE]
+> CAN peripheral clock is 80MHz
 
 ## CanMessage
 
@@ -103,3 +106,5 @@ while (true) {
 ```
 
 ---
+
+
