@@ -12,6 +12,30 @@ These methods allow developers to control DUE Scripts right from within Python, 
 - **Script.Execute(script)** - Executes the single line of code immediately <br>
 **script:** Script to be executed<br>
 
+
+
+This is an example to execute a single line in immediate mode. This does not modify the application stored in flash. 
+
+## [Python](#tab/py)
+
+```py
+duelink.Script.Execute("LED(200,200,10)")
+```
+
+## [JavaScript](#tab/js)
+
+```js
+await duelink.Script.Execute("LED(200,200,10)")
+```
+
+## [.NET](#tab/net)
+
+```cs
+duelink.Script.Execute("LED(200,200,10)");
+```
+
+___
+
 This example will check any script stored in flash, and clear them if program found.
 
 ## [Python](#tab/py)
@@ -44,7 +68,7 @@ if (currentScript != "")
 
 ---
 
-This example will load a simple program line by line and then record it.
+This example will load a simple program line by line and then record it. Variable `c` is used to indicate how many times the LED will blink for, which is 10 in this case. 
 
 ## [Python](#tab/py)
 
@@ -75,30 +99,8 @@ duelink.Script.Record();
 
 ___
 
-This is an example to execute a single line(immediate mode). This does not modify the application stored in flash. 
 
-
-## [Python](#tab/py)
-
-```py
-duelink.Script.Execute("LED(200,200,10)")
-```
-
-## [JavaScript](#tab/js)
-
-```js
-await duelink.Script.Execute("LED(200,200,10)")
-```
-
-## [.NET](#tab/net)
-
-```cs
-duelink.Script.Execute("LED(200,200,10)");
-```
-
-___
-
-You can also access a previously recorder program using goto (to label) or by calling a function that has a return. This example calls the recorded program above.
+You can then access a previously recorder program using goto (to label) or by calling a function that has a return. This example calls the recorded program above by executing a single line that contains two commands. The first one sets `c` to 5 and the second will send execution to `@Blink`, which will cause the LED to blink 5 times.
 
 ## [Python](#tab/py)
 
@@ -119,6 +121,3 @@ duelink.Script.Execute("c=5:goto Blink");
 ```
 
 ___
-
-
- 
