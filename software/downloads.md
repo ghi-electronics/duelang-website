@@ -24,6 +24,7 @@ Preview | Preview of the next release, not quite ready for production use.
 
 File | Date | Status
 --- | --- | ---
+[v1.1.6](https://ghistorage.blob.core.windows.net/downloads/Due/Firmware/due_sc13_v116.ghi) | 2024-09-26 | RC
 [v1.1.4](https://ghistorage.blob.core.windows.net/downloads/Due/Firmware/due_sc13_v114.ghi) | 2023-10-09 | RC
 [v1.1.3](https://ghistorage.blob.core.windows.net/downloads/Due/Firmware/due_sc13_v113.ghi) | 2023-09-21 | RC
 [v1.1.2](https://ghistorage.blob.core.windows.net/downloads/Due/Firmware/due_sc13_v112.ghi) | 2023-09-18 | RC
@@ -57,6 +58,7 @@ File | Date | Status
 
 File | Date | Status
 --- | --- | ---
+[v1.1.6](https://ghistorage.blob.core.windows.net/downloads/Due/Libraries/dotnet/GHIElectronics.DUELink.1.1.6.nupkg) | 2024-09-26 | RC
 [v1.1.1](https://ghistorage.blob.core.windows.net/downloads/Due/Libraries/dotnet/GHIElectronics.DUELink.1.1.1.nupkg) | 2023-09-26 | RC
 [v1.1.0](https://ghistorage.blob.core.windows.net/downloads/Due/Libraries/dotnet/GHIElectronics.DUELink.1.1.0.nupkg) | 2023-08-08 | RC
 [v1.0.3](https://ghistorage.blob.core.windows.net/downloads/Due/Libraries/dotnet/GHIElectronics.DUELink.1.0.3.nupkg) | 2023-05-30 | RC
@@ -71,6 +73,7 @@ File | Date | Status
 
 File | Date | Status
 --- | --- | ---
+[v1.1.6](https://ghistorage.blob.core.windows.net/downloads/Due/Libraries/python/DUELink-1.1.6-py3-none-any.whl) | 2024-09-26 | RC
 [v1.1.1](https://ghistorage.blob.core.windows.net/downloads/Due/Libraries/python/DUELink-1.1.1-py3-none-any.whl) | 2023-09-26 | RC
 [v1.1.0](https://ghistorage.blob.core.windows.net/downloads/Due/Libraries/python/DUELink-1.1.0-py3-none-any.whl) | 2023-08-08 | RC
 [v1.0.3](https://ghistorage.blob.core.windows.net/downloads/Due/Libraries/python/DUELink-1.0.3-py3-none-any.whl) | 2023-05-30 | RC
@@ -83,6 +86,7 @@ File | Date | Status
 
 File | Date | Status
 --- | --- | ---
+[v1.1.6](https://github.com/ghi-electronics/due-libraries/tree/main/javascript) | 2024-09-26 | RC
 [v1.1.1](https://github.com/ghi-electronics/due-libraries/tree/main/javascript) | 2023-09-26 | RC
 [v1.1.0](https://github.com/ghi-electronics/due-libraries/tree/main/javascript) | 2023-08-08 | RC
 [v1.0.3](https://github.com/ghi-electronics/due-libraries/tree/main/javascript) | 2023-05-30 | RC
@@ -91,6 +95,14 @@ File | Date | Status
 
 ## Release Notes
 
+### v1.1.6: 2024-09-27
+* Firmware:
+    - Add DUELink Spider
+* Library:
+    - Add DUELink Spider
+	- Remove Script.IsRunning, Script.Run
+	- Fix bugs
+	
 ### v1.1.4: 2023-10-09
 * Firmware:
     - Improved SoftwarePwm
