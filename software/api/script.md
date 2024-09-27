@@ -11,12 +11,6 @@ These methods allow developers to control DUE Scripts right from within Python, 
 - **Script.Read()** - Read the program stored in flash and return as string <br>
 - **Script.Execute(script)** - Executes the single line of code immediately <br>
 **script:** Script to be executed<br>
-- **Script.Run()** - Runs the program stored in flash  <br>
-
-> [!NOTE]
-> `Script.Run()` switches from immediate mode to run mode. Meaning, DUELink run by itself using the stored scripts in flash, no need host.
-
-
 
 This example will check any script stored in flash, and clear them if program found.
 
