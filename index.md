@@ -36,7 +36,7 @@ You do not need to learn microcontrollers and you do not need to settle with Mic
 
 While Python is the main supported language, DUELink Spider works beautifully with JavaScript pages, .NET C# projects, and more.
 
-[![Coding Options](images/btn-coding-options.png)](/software/coding-options/intro.md)
+[![Coding Options](images/btn-coding-options.png)](~/software/coding-options/intro.md)
 
 ---
 ## DUELink Spider
@@ -45,7 +45,7 @@ While Python is the main supported language, DUELink Spider works beautifully wi
 
 DUELink Spider is the bridge that allows you to effortlessly connect thousands of electronic sensors and modules to your PC/Phone/RPI - just plug and play!
 
-[![Hardware](images/btn-hardware-options.png)](/hardware/spider.md)
+[![Hardware](images/btn-hardware-options.png)](~/hardware/spider.md)
 
 ---
 
@@ -55,7 +55,7 @@ Some seemingly impossible physical computing tasks become easily accessible thro
 
 ![Physical Strength](images/rpi-strong.png)
 
-Let your Raspberry Pi do the heavy computational lifting to handle AI and other processor intensive tasks while utilizing DUELink Spider to handle the physical computing elements such as: controlling addressable Smart LEDs, reading physical sensors (distance, light, temp), and controlling multiple motors. 
+Let your Raspberry Pi do the heavy computational lifting to handle AI and other processor intensive tasks while utilizing DUELink to handle the physical computing elements such as: controlling addressable Smart LEDs, reading physical sensors (distance, light, temp), and controlling multiple motors. 
 
 This perfect marriage works on other single board computers, laptops, and phones!
 
