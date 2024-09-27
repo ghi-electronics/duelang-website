@@ -67,7 +67,6 @@ duelink.Spi.Read(arrayRead);
 duelink.Spi.Read(arrayRead, 0, 2, chipselect);
 
 duelink.Spi.WriteRead(arrayWrite, 0, arrayWrite.Length, arrayRead, 0, arrayRead.Length, chipselect);
-
 ```
 
 ---

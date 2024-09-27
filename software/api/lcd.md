@@ -139,8 +139,7 @@ const scaleHeight = 3
 await duelink.Display.DrawTextScale("DUE has color", color, x, y, scaleWidth, scaleHeight)
 
 // Draw some lines
-for ( let c = 2;c < 200; c++)
-{
+for ( let c = 2;c < 200; c++){
     await duelink.Display.DrawLine(c, c, 40, c, 60)
     await duelink.Display.DrawLine((c << 8), 200 - c, 60, 200-c, 80)
     await duelink.Display.DrawLine((c << 16), c, 80, c, 100)
@@ -187,8 +186,7 @@ var scaleHeight = 3;
 duelink.Display.DrawTextScale("DUE has color", color, x, y, scaleWidth, scaleHeight);
 
 // Draw some lines
-for ( var c = 2;c < 200; c++)
-{
+for ( var c = 2;c < 200; c++){
     duelink.Display.DrawLine((uint)c, c, 40, c, 60);
     duelink.Display.DrawLine((uint)(c << 8), 200 - c, 60, 200-c, 80);
     duelink.Display.DrawLine((uint)(c << 16), c, 80, c, 100);
@@ -500,7 +498,6 @@ var img = new uint[] {8, 8, // width: 8 and height: 8
     1, 0, 1, 0, 0, 1, 0, 1
 };
 
-
 duelink.Display.Clear(0);
 duelink.Display.DrawImage(img, 0, 0, duelink.Display.TransformNone);
 duelink.Display.DrawImageScale(img, 64, 0, 4, 4, duelink.Display.TransformRotate90);
@@ -560,15 +557,13 @@ duelink.Display.ShowBuffer(imageRaw, colorDepth)
 let imageRaw = new Uint8Array(128*64*4) // Create an image with width = 128, height = 64, 32 bit
 let colorDepth = 1 // 1bpp
 
-for (let i = 0; i < imageRaw.length; i++)
-{
+for (let i = 0; i < imageRaw.length; i++){
     imageRaw[i] = 0 // set all pixel to zero
 }
 
 await duelink.Display.ShowBuffer(imageRaw, colorDepth)
 
-for (let i = 0; i < imageRaw.length; i++)
-{
+for (let i = 0; i < imageRaw.length; i++){
     // set all pixel to 1
     imageRaw[i] = 1;
 }
@@ -582,16 +577,14 @@ await duelink.Display.ShowBuffer(imageRaw, colorDepth)
 var imageRaw = new byte[128 * 64 * 4]; // Create an image with width = 128, height = 64, 32 bit
 var colorDepth = 1; // 1bpp
 
-for (var i = 0; i < imageRaw.Length; i++)
-{
+for (var i = 0; i < imageRaw.Length; i++){
     // set all pixels to 0
     imageRaw[i] = 0; 
 }
 
 duelink.Display.ShowBuffer(imageRaw, colorDepth);
 
-for (var i = 0; i < imageRaw.Length; i++)
-{
+for (var i = 0; i < imageRaw.Length; i++){
     // set all pixels to 1
     imageRaw[i] = 1;
 }

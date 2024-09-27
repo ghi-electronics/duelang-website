@@ -11,7 +11,7 @@
 
 ## Hardware Setup
 
-Make sure your DUELink hardware is functional using [demo.duelink.com](https://demo.duelink.com/). Check that the board has the latest firmware. Compare the version  shown on the demo page when the device is connected to teh version found on teh [Downloads](downloads.md) page.
+Make sure your DUELink hardware is functional using [demo.duelink.com](https://demo.duelink.com/). Check that the board has the latest firmware. Compare the version  shown on the demo page when the device is connected to the version found on the [Downloads](downloads.md) page.
 
 ---
 
@@ -32,12 +32,12 @@ from DUELink.DUELinkController import DUELinkController
 import time
 
 availablePort = DUELinkController.GetConnectionPort()
-due = DUELinkController(availablePort)
+duelink = DUELinkController(availablePort)
 
 while True:
-    due.Led.Set(1,0,0)
+    duelink.Led.Set(1,0,0)
     time.sleep(0.5)
-    due.Led.Set(0,1,0)
+    duelink.Led.Set(0,1,0)
     time.sleep(0.5)
 ```
 
@@ -49,25 +49,25 @@ import {SerialUSB} from './serialusb.js';
 import * as DUELink from './duelink.js';
 import { Util } from "./util.js";
 
-let due = new DUELink.DUELinkController(new SerialUSB());
+let duelink = new DUELink.DUELinkController(new SerialUSB());
 await due.Connect();
 
 while (true){
-	await due.Led.Set(1, 0, 0)
+	await duelink.Led.Set(1, 0, 0)
 	await Util.sleep(500)
-	await due.Led.Set(0, 1, 0)
+	await duelink.Led.Set(0, 1, 0)
 	await Util.sleep(500)
 }
 ```
 # [.NET](#tab/net)
 ```cs
 var availablePort = DUELinkController.GetConnectionPort();
-var due = new DUELinkController(availablePort);
+var duelink = new DUELinkController(availablePort);
  
 while (true) {
-	due.Led.Set(1, 0, 0);
+	duelink.Led.Set(1, 0, 0);
 	Thread.Sleep(500);
-	due.Led.Set(0, 1, 0);
+	duelink.Led.Set(0, 1, 0);
 	Thread.Sleep(500);
 }
 ```
@@ -113,7 +113,7 @@ import * as DUELink from './duelink.js';
 import { Util } from "./util.js";
 
 let duelink = new DUELink.DUELinkController(new SerialUSB());
-await due.Connect();
+await duelink.Connect();
 
 while (true){
 	await duelink.Digital.Write('l', 1)
@@ -125,7 +125,7 @@ while (true){
 # [.NET](#tab/net)
 ```cs
 var availablePort = DUELinkController.GetConnectionPort();
-var due = new DUELinkController(availablePort);
+var duelink = new DUELinkController(availablePort);
  
 while (true) {
 	duelink.Digital.Write('l', 1);

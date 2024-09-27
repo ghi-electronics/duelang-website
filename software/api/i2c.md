@@ -2,7 +2,7 @@
 
 ---
 
-I2C is one of protocol that used widely in most sensors.
+I2C is one of the protocols that is used widely in most sensors.
 
 - **I2c.Write(address, arrayWrite, indexWrite, writeCount)** Write an array of data to an I2C slave<br>
 **address:** I2C slave address<br>
@@ -33,7 +33,7 @@ I2C is one of protocol that used widely in most sensors.
 dataWrite = [11,22]
 duelink.I2c.Write(0x2C, dataWrite)
 
-// Read 2 bytes from address 0x2C
+# Read 2 bytes from address 0x2C
 dataRead = [0]*2
 duelink.I2c.Read(0x2C, dataRead)
 

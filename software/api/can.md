@@ -1,9 +1,9 @@
-# Controller Area Network (CAN)
+# CAN
 
 ---
 
 - **Can.Initialize(baudrate)** - Initialize CAN with special baudrate <br>
-**baudrate:**  Accept 125000, 250000, 500000, 1000000 <br>
+**baudrate:**  Accepts 125000, 250000, 500000, 1000000 <br>
 
 - **Can.InitializeExt(phase1, phase2, prescaler, synchronizationJumpWidth)** - User defined baudrate. Max 1000000 (1Mbs)  <br>
 **phase1**: Time segment 1. Max is 15 <br>
@@ -53,7 +53,6 @@ while True :
         duelink.Can.Write(message)
     
     time.sleep(1)
-
 ```
 
 > [!TIP]
@@ -64,10 +63,8 @@ while True :
 ```js
 await duelink.Can.Initialize(500000)
 
-while (true) 
-{
-    if (await duelink.Can.Available() > 0)
-    {
+while (true) {
+    if (await duelink.Can.Available() > 0){
         let message = await duelink.Can.Read()
        
         // print received message detail
@@ -79,7 +76,6 @@ while (true)
         // send back to sender
         await duelink.Can.Write(message)
     }
-
     await Util.sleep(1000)
 }
 ```
@@ -92,10 +88,8 @@ while (true)
 ```cs
 duelink.Can.Initialize(500000);
 
-while (true) 
-{
-    if (duelink.Can.Available() > 0)
-    {
+while (true) {
+    if (duelink.Can.Available() > 0){
         var message = duelink.Can.Read();
 
         // print received message detail
@@ -107,7 +101,6 @@ while (true)
         // send back to sender
         duelink.Can.Write(message);
     }
-
     Thread.Sleep(1000);
 }
 ```

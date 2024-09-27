@@ -36,16 +36,16 @@ You do not need to learn microcontrollers and you do not need to settle with Mic
 
 While Python is the main supported language, DUELink Spider works beautifully with JavaScript pages, .NET C# projects, and more.
 
-[![Coding Options](images/btn-coding-options.png)](/software/coding-options/coding-options.md)
+[![Coding Options](images/btn-coding-options.png)](~/software/coding-options/intro.md)
 
 ---
-## Hardware options
+## DUELink Spider
 
 ![Spider Connections](images/spider-connections.png)
 
 DUELink Spider is the bridge that allows you to effortlessly connect thousands of electronic sensors and modules to your PC/Phone/RPI - just plug and play!
 
-[![Hardware](images/btn-hardware-options.png)](/hardware/intro.md)
+[![Hardware](images/btn-hardware-options.png)](~/hardware/spider.md)
 
 ---
 
@@ -55,7 +55,7 @@ Some seemingly impossible physical computing tasks become easily accessible thro
 
 ![Physical Strength](images/rpi-strong.png)
 
-Let your Raspberry Pi do the heavy computational lifting to handle AI and other processor intensive tasks while utilizing DUELink Spider to handle the physical computing elements such as: controlling addressable Smart LEDs, reading physical sensors (distance, light, temp), and controlling multiple motors. 
+Let your Raspberry Pi do the heavy computational lifting to handle AI and other processor intensive tasks while utilizing DUELink to handle the physical computing elements such as: controlling addressable Smart LEDs, reading physical sensors (distance, light, temp), and controlling multiple motors. 
 
 This perfect marriage works on other single board computers, laptops, and phones!
 
@@ -68,7 +68,7 @@ This perfect marriage works on other single board computers, laptops, and phones
 
 [GHI Electronics](https://www.ghielectronics.com/) has been bridging the hardware-to-software gap for over 20 years. Our Michigan, USA headquarters is the center of our innovative engineering and quality manufacturing.
 
-**We are Where Hardware Meets Software!**
+**We are "Where Hardware Meets Software!"**
 
 
 > [!Video https://www.youtube.com/embed/ojJmKfdOpAI]

@@ -2,9 +2,9 @@
 
 ---
 
-This function is used when using a distance sensors. 
+This function is used when using distance sensors. 
 
-- **Distance.Read(trigger, echo)** - uses ultrasonic sonic sensor to read distance.<br>
+- **Distance.Read(trigger, echo)** - Uses ultrasonic sonic sensor to read distance.<br>
 **trigger:** The pin number that is connected to trigger (pulse) signal<br>
 **echo:**  The pin number that is connected to echo signal, use `-1` for single pin <br>
 **Returns:**  Distance in centimeters
@@ -25,7 +25,6 @@ while True:
         print(x)
 
     time.sleep(0.1)
-}
 ```
 
 ## [JavaScript](#tab/js)
