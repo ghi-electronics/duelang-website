@@ -7,7 +7,7 @@ Thousands of Click modules are offered by [MicroElekcronica](https://www.mikroe.
 ![Mikroe Click](images/mikroe-click.png)
 
 
-These standard includes multiple ways of connecting sensors, such as SPI or I2C. This opens the door the possibilities but also means more knowledge is necessary.
+This standard includes multiple ways of connecting sensors, such as SPI or I2C. This opens the door the possibilities but also means more knowledge is necessary.
 
 ![Mikroe Click Pinout](images/click-pinout.png)
 
