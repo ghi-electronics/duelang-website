@@ -23,12 +23,6 @@ If using serialport, `dlserialusb` package is needed:
 npm install dlserialusb
 ```
 
-If using a web browser, `serialweb` package is needed:
-
-```js
-npm install serialweb
-```
-
 > [!TIP]
 > Make sure your hardware is updated with the latest firmware listed on the [downloads](../downloads.md) page.
 
