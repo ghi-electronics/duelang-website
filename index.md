@@ -11,10 +11,10 @@ Leverage your coding skills to code things right from a PC, a phone, or even a R
 
 ## We are Live on Kickstarter
 
-[![Back us on Kickstarter](images/backus-on-kickstarter.png)](https://www.kickstarter.com/)
+[![Back us on Kickstarter](images/backus-on-kickstarter.png)](https://www.kickstarter.com/projects/ghielectronics/duelink-bridging-software-to-hardware/)
 
 
-[Back us on Kickstarter](https://www.kickstarter.com/) and secure your own.
+[Back us on Kickstarter](https://www.kickstarter.com/projects/ghielectronics/duelink-bridging-software-to-hardware/) and secure your own.
 
 
 </div>

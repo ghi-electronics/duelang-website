@@ -45,19 +45,23 @@ while True:
 # [JavaScript](#tab/js)
 
 ```js
-import {SerialUSB} from './serialusb.js';
-import * as DUELink from './duelink.js';
-import { Util } from "./util.js";
+const { SerialUSB } = require("dlserialusb");
+const { DUELinkController } = require("duelink");
+const { Util } = require("duelink");
 
-let duelink = new DUELink.DUELinkController(new SerialUSB());
-await due.Connect();
-
-while (true){
-	await duelink.Led.Set(1, 0, 0)
-	await Util.sleep(500)
-	await duelink.Led.Set(0, 1, 0)
-	await Util.sleep(500)
+async function  Blinky() {
+    let duelink = new DUELinkController(new SerialUSB());
+    await duelink.Connect();
+    
+    while (true){
+        await duelink.Led.Set(1, 0, 0)
+        await Util.sleep(500)
+        await duelink.Led.Set(0, 1, 0)
+        await Util.sleep(500)
+    } 
 }
+
+Blinky()
 ```
 # [.NET](#tab/net)
 ```cs
