@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/ghi-electronics/duelink-website/blob/duelink_v1.1.5/software/api/lcd.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/ghi-electronics/duelink-website/blob/dev/software/api/lcd.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -104,7 +104,7 @@ The Configuration property (documented below) can be used to configure the syste
 <hr>
 <h2 id="display-configuration">Display Configuration</h2>
 <ul>
-<li><p><strong>Display.Configuration</strong> Property, change display configuration<br>
+<li><p><strong>Display.Configuration</strong> - Property, change display configuration<br>
 <strong>Type:</strong> Screen supported: BuiltIn = 0, ILI9342 = 0x80, ILI9341 = 0x81, ST7735 = 0x82, SSD1306 = 0x3C. If an SSD1306 screen has different i2c slave address 0x3C, set Type to that address directly <br>
 <strong>SpiChipSelect:</strong> Chip select pin, SPI display only<br>
 <strong>SpiDataControl:</strong> Data control pin, SPI display only<br>
@@ -331,7 +331,7 @@ duelink.Display.Show();
 <h2 id="graphical-memory">Graphical Memory</h2>
 <p>All LCD functions process the graphics commands in an internal memory. It starts with Clear(), which clears up the entire graphics memory to a specific color. When the user is ready, the graphical memory is transferred to the display using Show().</p>
 <ul>
-<li><p><strong>Display.Clear(color)</strong>  Clears the entire screen to black or white <br>
+<li><p><strong>Display.Clear(color)</strong>  - Clears the entire screen to black or white <br>
 <strong>color:</strong> Color value</p>
 </li>
 <li><p><strong>Display.SetPixel(color, x, y)</strong> <br>
@@ -475,19 +475,19 @@ duelink.Display.Show();
 <hr>
 <h2 id="text">Text</h2>
 <ul>
-<li><p><strong>Display.DrawText(text, color, x, y)</strong> <br>
+<li><p><strong>Display.DrawText(text, color, x, y)</strong> - Draw text with default font<br>
 <strong>text:</strong> String message in double quotes. <br>
 <strong>color:</strong> Color value <br>
 <strong>x:</strong> x position <br>
 <strong>y:</strong> x position <br></p>
 </li>
-<li><p><strong>Display.DrawTextTiny(text, color, x, y)</strong> Draw tiny text - Displays tiny 5px text.<br>
+<li><p><strong>Display.DrawTextTiny(text, color, x, y)</strong> - Draw tiny text - Displays tiny 5px text.<br>
 <strong>text:</strong> String message in double quotes. <br>
 <strong>color:</strong> Color value <br>
 <strong>x:</strong> x position <br>
 <strong>y:</strong> x position <br></p>
 </li>
-<li><p><strong>Display.DrawTextScale(text, color, x, y, scaleWidth, scaleHeight)</strong> Works exactly the same as LcdText() but adds scaling.<br>
+<li><p><strong>Display.DrawTextScale(text, color, x, y, scaleWidth, scaleHeight)</strong> - Works exactly the same as LcdText() but adds scaling.<br>
 <strong>text:</strong> String message in double quotes. <br>
 <strong>color:</strong> Color value <br>
 <strong>x:</strong> x position <br>
@@ -543,13 +543,13 @@ duelink.Display.Show();
 <h2 id="images">Images</h2>
 <p>There are cases where images need to be added to the screen. Of course, we are taking about basic simple images, more like a tiny sprite in a game.</p>
 <ul>
-<li><p><strong>Display.DrawImage(array, x, y, transform)</strong> Array of pixel, must start with 2 elements that contain the image's width and height <br>
+<li><p><strong>Display.DrawImage(array, x, y, transform)</strong> - Array of pixel, must start with 2 elements that contain the image's width and height <br>
 <strong>array:</strong> Image array (see below). <br>
 <strong>x:</strong> x position on screen. <br>
 <strong>y:</strong> y position on screen. <br>
 <strong>transform:</strong> transform modifier. <br></p>
 </li>
-<li><p><strong>Display.DrawImageScale(array, x, y, scaleWidth, scaleHeight, transform)</strong> Works the same as <code>DrawImage()</code> but adds scaling.  <br>
+<li><p><strong>Display.DrawImageScale(array, x, y, scaleWidth, scaleHeight, transform)</strong> - Works the same as <code>DrawImage()</code> but adds scaling.  <br>
 <strong>array:</strong> Image array (see below). <br>
 <strong>x:</strong> x position on screen. <br>
 <strong>y:</strong> y position on screen. <br>
@@ -668,7 +668,7 @@ duelink.Display.Show();
 <h2 id="showbuffer">ShowBuffer</h2>
 <p>This function takes raw bitmap image (32 bit), convert to new array with <code>ColorDepth</code> format internally, then send the new array data to device.</p>
 <ul>
-<li><strong>Display.ShowBuffer(rawData, colorDepth)</strong> Show 32 bit raw image data on screen<br>
+<li><strong>Display.ShowBuffer(rawData, colorDepth)</strong> - Show 32 bit raw image data on screen<br>
 <strong>rawData</strong> Inout raw data. Must be 32 bit and alpha will be ignored <br>
 <strong>ColorDepth:</strong> This lets the stream know what is the format of the incoming data stream. B&amp;W displays only support 1. Color displays support 4 (palette), 8, and 16 bits.</li>
 </ul>
@@ -889,7 +889,7 @@ duelink.Display.Palette(2, 0x000000);
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/ghi-electronics/duelink-website/blob/duelink_v1.1.5/software/api/lcd.md/#L1" class="edit-link">Edit this page</a>
+          <a href="https://github.com/ghi-electronics/duelink-website/blob/dev/software/api/lcd.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>

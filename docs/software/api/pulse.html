@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>System Functions </title>
+      <title>Pulse </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="System Functions ">
+      <meta name="title" content="Pulse ">
       
       
       <link rel="icon" href="../../images/favicon.ico">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/ghi-electronics/duelink-website/blob/dev/software/api/systemfunctions.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/ghi-electronics/duelink-website/blob/dev/software/api/pulse.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -85,61 +85,17 @@
         </div>
 
         <article data-uid="">
-<h1 id="system-functions">System Functions</h1>
+<h1 id="pulse">Pulse</h1>
 
 <hr>
+<p>Generate pulses with delay. This feature is great for controlling stepper motors.</p>
 <ul>
-<li><p><strong>System.Print(text)</strong>  - Prints the value of the argument to the console on the same line <br>
-<strong>text:</strong> String or variable</p>
-</li>
-<li><p><strong>System.Println(text)</strong>  - Prints the value of the argument to the console then moves to the next line <br>
-<strong>text:</strong> String or variable</p>
-</li>
-<li><p><strong>System.Reset(loader)</strong> - Resets the board <br>
-<strong>loader:</strong> 0 = system reset,  1 = reset and stay in loader mode</p>
-</li>
-<li><p><strong>System.GetTickMilliseconds()</strong> - Read system ticks in milliseconds  <br></p>
-</li>
-<li><p><strong>System.GetTickMicroseconds()</strong> - Read system ticks microseconds  <br></p>
-</li>
-<li><p><strong>System.Wait(duration)</strong> - Holds program from running <br>
-<strong>duration:</strong> Duration in milliseconds</p>
-</li>
-<li><p><strong>System.Version</strong>  - Returns the current firmware version <br>
-The last character returned in Version is board <br></p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Board</th>
-<th style="text-align: left;">Character</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">DUElink Spider</td>
-<td style="text-align: left;">D</td>
-</tr>
-<tr>
-<td style="text-align: left;">Pulse</td>
-<td style="text-align: left;">P</td>
-</tr>
-<tr>
-<td style="text-align: left;">Edge</td>
-<td style="text-align: left;">E</td>
-</tr>
-<tr>
-<td style="text-align: left;">Flea</td>
-<td style="text-align: left;">F</td>
-</tr>
-<tr>
-<td style="text-align: left;">Pico</td>
-<td style="text-align: left;">I</td>
-</tr>
-</tbody>
-</table>
-</li>
+<li><strong>Pulse.Set(pin, pulseCount, pulseDuration)</strong> - Generate pulses <br></li>
+<li><strong>pin:</strong>  Pin number   <br></li>
+<li><strong>pulseCount:</strong> Count of pulse will be generated <br></li>
+<li><strong>pulseDuration</strong> Length of pulse, in microsecond <br></li>
 </ul>
-<p>Example:</p>
+<p>The example below generate 400 pulses (step) on pin 6. Each pulse has 1000us (500us high and 500us low)</p>
 <div class="tabGroup" id="tabgroup_1">
 <ul role="tablist">
 <li role="presentation">
@@ -154,74 +110,17 @@ The last character returned in Version is board <br></p>
 </ul>
 <section id="tabpanel_1_py" role="tabpanel" data-tab="py">
 
-<pre><code class="lang-py"># print &quot;Hello world&quot;
-duelink.System.Print(&quot;Hello world&quot;)
-
-#  print &quot;Hello world&quot; and add new line
-duelink.System.Println(&quot;Hello world&quot;)
-
-#  Check version number
-print(duelink.System.Version)
-
-#  Get device tick in millisecond
-print(duelink.System.GetTickMilliseconds())
-
-#  Get device tick in microsecond
-print(duelink.System.GetTickMicroseconds())
-
-#  Delay 1 second
-duelink.System.Wait(1000)
-
-#  Reset the device
-duelink.System.Reset(0)
+<pre><code class="lang-py">duelink.Pulse.Set(6, 400, 1000)
 </code></pre>
 </section>
 <section id="tabpanel_1_js" role="tabpanel" data-tab="js" aria-hidden="true" hidden="hidden">
 
-<pre><code class="lang-js">// print &quot;Hello world&quot;
-await duelink.System.Print(&quot;Hello world&quot;)
-
-// print &quot;Hello world&quot; and add new line
-await duelink.System.Println(&quot;Hello world&quot;)
-
-// Check version number
-console.log(duelink.System.Version)
-
-// Get device tick in millisecond
-console.log(await duelink.System.GetTickMilliseconds())
-
-// Get device tick in microsecond
-console.log(await duelink.System.GetTickMicroseconds())
-
-// Delay 1 second
-await duelink.System.Wait(1000)
-
-// Reset the device
-await duelink.System.Reset(0)
+<pre><code class="lang-js">await duelink.Pulse.Set(6, 400, 1000)
 </code></pre>
 </section>
 <section id="tabpanel_1_net" role="tabpanel" data-tab="net" aria-hidden="true" hidden="hidden">
 
-<pre><code class="lang-cs">// print &quot;Hello world&quot;
-duelink.System.Print(&quot;Hello world&quot;);
-
-// print &quot;Hello world&quot; and add new line
-duelink.System.Println(&quot;Hello world&quot;);
-
-// Check version number
-Console.WriteLine(duelink.System.Version);
-
-// Get device tick in millisecond
-Console.WriteLine(duelink.System.GetTickMilliseconds());
-
-// Get device tick in microsecond
-Console.WriteLine(duelink.System.GetTickMicroseconds());
-
-// Delay 1 second
-duelink.System.Wait(1000);
-
-// Reset the device
-duelink.System.Reset(0);
+<pre><code class="lang-cs">duelink.Pulse.Set(6, 400, 1000);
 </code></pre>
 </section>
 </div>
@@ -229,7 +128,7 @@ duelink.System.Reset(0);
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/ghi-electronics/duelink-website/blob/dev/software/api/systemfunctions.md/#L1" class="edit-link">Edit this page</a>
+          <a href="https://github.com/ghi-electronics/duelink-website/blob/dev/software/api/pulse.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>

@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/ghi-electronics/duelink-website/blob/duelink_v1.1.5/software/getting-started.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/ghi-electronics/duelink-website/blob/dev/software/getting-started.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -128,19 +128,23 @@ while True:
 </section>
 <section id="tabpanel_1_js" role="tabpanel" data-tab="js" aria-hidden="true" hidden="hidden">
 
-<pre><code class="lang-js">import {SerialUSB} from './serialusb.js';
-import * as DUELink from './duelink.js';
-import { Util } from &quot;./util.js&quot;;
+<pre><code class="lang-js">const { SerialUSB } = require(&quot;dlserialusb&quot;);
+const { DUELinkController } = require(&quot;duelink&quot;);
+const { Util } = require(&quot;duelink&quot;);
 
-let duelink = new DUELink.DUELinkController(new SerialUSB());
-await due.Connect();
-
-while (true){
-	await duelink.Led.Set(1, 0, 0)
-	await Util.sleep(500)
-	await duelink.Led.Set(0, 1, 0)
-	await Util.sleep(500)
+async function  Blinky() {
+    let duelink = new DUELinkController(new SerialUSB());
+    await duelink.Connect();
+    
+    while (true){
+        await duelink.Led.Set(1, 0, 0)
+        await Util.sleep(500)
+        await duelink.Led.Set(0, 1, 0)
+        await Util.sleep(500)
+    } 
 }
+
+Blinky()
 </code></pre>
 </section>
 <section id="tabpanel_1_net" role="tabpanel" data-tab="net" aria-hidden="true" hidden="hidden">
@@ -249,7 +253,7 @@ while (true) {
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/ghi-electronics/duelink-website/blob/duelink_v1.1.5/software/getting-started.md/#L1" class="edit-link">Edit this page</a>
+          <a href="https://github.com/ghi-electronics/duelink-website/blob/dev/software/getting-started.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>

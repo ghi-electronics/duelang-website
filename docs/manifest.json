@@ -172,6 +172,16 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "hardware/images/click-pinout.png",
+      "output": {
+        "resource": {
+          "relative_path": "hardware/images/click-pinout.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "hardware/images/click-shield.gif",
       "output": {
         "resource": {
@@ -425,6 +435,16 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/backus-on-kickstarter.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/backus-on-kickstarter.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/btn-coding-options.png",
       "output": {
         "resource": {
@@ -605,6 +625,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "index2.md",
+      "output": {
+        ".html": {
+          "relative_path": "index2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "software/api/analog.md",
       "output": {
         ".html": {
@@ -779,6 +809,16 @@
       "output": {
         ".html": {
           "relative_path": "software/api/neopixel.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "software/api/pulse.md",
+      "output": {
+        ".html": {
+          "relative_path": "software/api/pulse.html"
         }
       },
       "version": ""
@@ -1689,6 +1729,16 @@
       "output": {
         ".html": {
           "relative_path": "software/legal.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "software/resources.md",
+      "output": {
+        ".html": {
+          "relative_path": "software/resources.html"
         }
       },
       "version": ""

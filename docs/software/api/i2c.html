@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/ghi-electronics/duelink-website/blob/duelink_v1.1.5/software/api/i2c.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/ghi-electronics/duelink-website/blob/dev/software/api/i2c.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -90,19 +90,19 @@
 <hr>
 <p>I2C is one of the protocols that is used widely in most sensors.</p>
 <ul>
-<li><p><strong>I2c.Write(address, arrayWrite, indexWrite, writeCount)</strong> Write an array of data to an I2C slave<br>
+<li><p><strong>I2c.Write(address, arrayWrite, indexWrite, writeCount)</strong> - Write an array of data to an I2C slave<br>
 <strong>address:</strong> I2C slave address<br>
 <strong>arrayWrite:</strong> Array to send<br>
 <strong>indexWrite:</strong> Index of data in the array (optional, default is 0).<br>
 <strong>writeCount:</strong> The number of bytes to write (optional, default is length of array) <br></p>
 </li>
-<li><p><strong>I2c.Read(address, arrayRead, indexRead, readCount)</strong> Write an array of data to an I2C slave<br>
+<li><p><strong>I2c.Read(address, arrayRead, indexRead, readCount)</strong> - Read data from an I2C slave<br>
 <strong>address:</strong> I2C slave address<br>
 <strong>arrayRead:</strong> Array to read<br>
 <strong>indexRead:</strong> Index of data in the array (optional, default is 0)<br>
 <strong>readCount:</strong> The number of bytes to read (optional, default is length of array) <br></p>
 </li>
-<li><p><strong>I2c.WriteRead(address, arrayWrite, indexWrite, writeCount, arrayRead, indexRead, readCount)</strong> Write an array of data to an I2C slave <br>
+<li><p><strong>I2c.WriteRead(address, arrayWrite, indexWrite, writeCount, arrayRead, indexRead, readCount)</strong> - Write and read data  <br>
 <strong>address:</strong> I2C slave address<br>
 <strong>arrayWrite:</strong> Array to send<br>
 <strong>indexWrite:</strong> Index of data in the array<br>
@@ -173,7 +173,7 @@ duelink.I2c.WriteRead(0x2C, dataWrite, 0, dataWrite.Length, dataRead, 0, dataRea
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/ghi-electronics/duelink-website/blob/duelink_v1.1.5/software/api/i2c.md/#L1" class="edit-link">Edit this page</a>
+          <a href="https://github.com/ghi-electronics/duelink-website/blob/dev/software/api/i2c.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>

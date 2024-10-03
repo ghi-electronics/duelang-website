@@ -2,21 +2,21 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Python </title>
+      <title>Resources </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Python ">
+      <meta name="title" content="Resources ">
       
       
-      <link rel="icon" href="../../images/favicon.ico">
-      <link rel="stylesheet" href="../../public/docfx.min.css">
-      <link rel="stylesheet" href="../../public/main.css">
-      <meta name="docfx:navrel" content="../../toc.html">
-      <meta name="docfx:tocrel" content="../toc.html">
+      <link rel="icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
       
-      <meta name="docfx:rel" content="../../">
+      <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/ghi-electronics/duelink-website/blob/dev/software/coding-options/python.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/ghi-electronics/duelink-website/blob/dev/software/resources.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -31,7 +31,7 @@
       <meta name="loc:downloadPdf" content="Download PDF">
   </head>
 
-  <script type="module" src="./../../public/docfx.min.js"></script>
+  <script type="module" src="./../public/docfx.min.js"></script>
 
   <script>
     const theme = localStorage.getItem('theme') || 'auto'
@@ -43,8 +43,8 @@
     <header class="bg-body border-bottom">
       <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
         <div class="container-xxl flex-nowrap">
-          <a class="navbar-brand" href="../../index.html">
-            <img id="logo" class="svg" src="../../images/logo.png" alt="">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.png" alt="">
             
           </a>
           <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
@@ -85,43 +85,26 @@
         </div>
 
         <article data-uid="">
-<h1 id="python">Python</h1>
+<h1 id="resources">Resources</h1>
 
 <hr>
-<p><img src="../images/python.png" alt="Python"></p>
-<p>Python is the main language used with AI and data science. The provided DUELink Python library allows a full standard Python program to access the physical world. For example, an AI vision facial recognition can now control a door lock.</p>
-<h2 id="setup">Setup</h2>
-<p>This page assumes the user is already familiar with Python and there is a development machine that is already setup to build and run Python programs. No changes are needed there but we are using Microsoft Visual Studio Code as a personal preference.</p>
-<div class="TIP">
-<h5>Tip</h5>
-<p>Make sure your hardware is updated with the latest firmware listed on the <a href="../downloads.html">downloads</a> page.</p>
-</div>
-<p>Start a new project with a simple line of code to test out the project is running.</p>
-<pre><code class="lang-py">print(&quot;Hello DUELink!&quot;)
-</code></pre>
-<p>We now need to install the DUE Python library <code>pip install DUELink</code>. The DUELink package will also install all required dependencies.</p>
-<div class="TIP">
-<h5>Tip</h5>
-<p>The DUE python library requires pySerial, which may require an admin access to install.</p>
-</div>
-<h2 id="blinky">Blinky!</h2>
-<p>Our first program will blink the on-board on for 200ms then it shuts off for 800ms, and does this 20 times.</p>
-<pre><code class="lang-py">from DUELink.DUELinkController import DUELinkController
-print(&quot;Hello DUE!&quot;)
-availablePort = DUELinkController.GetConnectionPort()
-duelink = DUELinkController(availablePort)
-# Flash the LED  (on for 200ms, off for 800ms, 20 times)
-duelink.Led.Set(200,800,20)
-print(&quot;Bye DUE!&quot;)
-</code></pre>
-<h2 id="python-api">Python API</h2>
-<p>The <a href="../api/intro.html">API</a> page includes all details and examples to use all the available &quot;physical world&quot; services.</p>
-<p>Use the above example program to initiate the hardware, instantiate the <code>duelink</code> object, and then use any of the available APIs, such as `duelink.Sound.Beep('p', 500, 1000)' to generate a beep using the on-board peizo buzzer with a frequency of 500Hz for 1000ms</p>
+<h2 id="hardware">Hardware</h2>
+<ul>
+<li><a href="https://ghistorage.blob.core.windows.net/downloads/Due/Resources/DUELink_revA4.pdf">DUELink Spider schematic</a></li>
+<li><a href="https://ghistorage.blob.core.windows.net/downloads/Due/Resources/duelink_spider_enclosure3d.zip">DUELink Spider 3D Enclosure</a></li>
+</ul>
+<h2 id="libraries">Libraries</h2>
+<p>The official Python, JavaScript and .NET libraries for DUELink: <a href="https://github.com/ghi-electronics/due-libraries">Libraries</a></p>
+<h2 id="samples">Samples</h2>
+<p>Sample projects can be found here: <a href="https://github.com/ghi-electronics/due-samples">Samples</a></p>
+<p>One of the samples is the <a href="https://demo.duelink.com/">Demo website</a>.</p>
+<h2 id="duelink-console">DUELink Console</h2>
+<p><a href="https://console.duelink.com/">DUELink Console</a> sources are available (<a href="https://github.com/ghi-electronics/due-console">https://github.com/ghi-electronics/due-console</a>)</p>
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/ghi-electronics/duelink-website/blob/dev/software/coding-options/python.md/#L1" class="edit-link">Edit this page</a>
+          <a href="https://github.com/ghi-electronics/duelink-website/blob/dev/software/resources.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>

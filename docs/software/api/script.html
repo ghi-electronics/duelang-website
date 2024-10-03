@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/ghi-electronics/duelink-website/blob/duelink_v1.1.5/software/api/script.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/ghi-electronics/duelink-website/blob/dev/software/api/script.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -88,62 +88,159 @@
 <h1 id="script">Script</h1>
 
 <hr>
-<p>These methods allow developers to control DUE Scripts right from within .NET</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Method</th>
-<th style="text-align: left;">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">Script.Execute()</td>
-<td style="text-align: left;">Executes the single line of code immediately</td>
-</tr>
-<tr>
-<td style="text-align: left;">Script.IsRunning()</td>
-<td style="text-align: left;">Checks if DUE Script is running</td>
-</tr>
-<tr>
-<td style="text-align: left;">Script.Load()</td>
-<td style="text-align: left;">Loads the line into internal buffer</td>
-</tr>
-<tr>
-<td style="text-align: left;">Script.New()</td>
-<td style="text-align: left;">Clears the program stored in flash</td>
-</tr>
-<tr>
-<td style="text-align: left;">Script.Read()</td>
-<td style="text-align: left;">Read the program stored in flash and return as string</td>
-</tr>
-<tr>
-<td style="text-align: left;">Script.Record()</td>
-<td style="text-align: left;">Sends the internal buffer to the device, overwriting any previous programs</td>
-</tr>
-<tr>
-<td style="text-align: left;">Script.Run()</td>
-<td style="text-align: left;">Runs the program stored in flash</td>
-</tr>
-</tbody>
-</table>
-<p>This example will load a simple program line by line and then record it.</p>
-<pre><code class="lang-csharp">due.Script.Load(&quot;c = 10&quot;);
-due.Script.Load(&quot;@Blink&quot;);
-due.Script.Load(&quot;Led(100,100,c)&quot;);
-due.Script.Record();
+<p>These methods allow developers to control DUE Scripts right from within Python, JavaScript or .NET</p>
+<ul>
+<li><strong>Script.New()</strong> - Clears the program stored in flash <br></li>
+<li><strong>Script.Load(script)</strong> - Loads the line into internal buffer <br>
+<strong>script:</strong> Line to load into internal buffer <br></li>
+<li><strong>Script.Record()</strong> - Sends the internal buffer to the device, overwriting any previous programs <br></li>
+<li><strong>Script.Read()</strong> - Read the program stored in flash and return as string <br></li>
+<li><strong>Script.Execute(script)</strong> - Executes the single line of code immediately <br>
+<strong>script:</strong> Script to be executed<br></li>
+</ul>
+<p>This is an example to execute a single line in immediate mode. This does not modify the application stored in flash.</p>
+<div class="tabGroup" id="tabgroup_1">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_1_py" role="tab" aria-controls="tabpanel_1_py" data-tab="py" tabindex="0" aria-selected="true">Python</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_1_js" role="tab" aria-controls="tabpanel_1_js" data-tab="js" tabindex="-1">JavaScript</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_1_net" role="tab" aria-controls="tabpanel_1_net" data-tab="net" tabindex="-1">.NET</a>
+</li>
+</ul>
+<section id="tabpanel_1_py" role="tabpanel" data-tab="py">
+
+<pre><code class="lang-py">duelink.Script.Execute(&quot;LED(200,200,10)&quot;)
 </code></pre>
-<p>This is an example to execute a single line(immediate mode). This does not modify the application stored in flash.</p>
-<pre><code class="lang-csharp">due.Script.Execute(&quot;LED(200,200,10)&quot;);
+</section>
+<section id="tabpanel_1_js" role="tabpanel" data-tab="js" aria-hidden="true" hidden="hidden">
+
+<pre><code class="lang-js">await duelink.Script.Execute(&quot;LED(200,200,10)&quot;)
 </code></pre>
-<p>You can also access a previously recorder program using goto (to label) or by calling a function that has a return. This example calls the recorded program above.</p>
-<pre><code class="lang-csharp">due.Script.Execute(&quot;c=5:goto Blink&quot;);
+</section>
+<section id="tabpanel_1_net" role="tabpanel" data-tab="net" aria-hidden="true" hidden="hidden">
+
+<pre><code class="lang-cs">duelink.Script.Execute(&quot;LED(200,200,10)&quot;);
 </code></pre>
+</section>
+</div>
+
+<p>This example will check any script stored in flash, and clear them if program found.</p>
+<div class="tabGroup" id="tabgroup_2">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_2_py" role="tab" aria-controls="tabpanel_2_py" data-tab="py" tabindex="0" aria-selected="true">Python</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_2_js" role="tab" aria-controls="tabpanel_2_js" data-tab="js" tabindex="-1">JavaScript</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_2_net" role="tab" aria-controls="tabpanel_2_net" data-tab="net" tabindex="-1">.NET</a>
+</li>
+</ul>
+<section id="tabpanel_2_py" role="tabpanel" data-tab="py">
+
+<pre><code class="lang-py">
+currentScript = duelink.Script.Read()
+
+if (currentScript != &quot;&quot;):
+    duelink.Script.New()
+</code></pre>
+</section>
+<section id="tabpanel_2_js" role="tabpanel" data-tab="js" aria-hidden="true" hidden="hidden">
+
+<pre><code class="lang-js">let currentScript = await duelink.Script.Read()
+
+if (currentScript != &quot;&quot;)
+    await duelink.Script.New();
+</code></pre>
+</section>
+<section id="tabpanel_2_net" role="tabpanel" data-tab="net" aria-hidden="true" hidden="hidden">
+
+<pre><code class="lang-cs">var currentScript = duelink.Script.Read();
+
+if (currentScript != &quot;&quot;)
+    duelink.Script.New();
+</code></pre>
+</section>
+</div>
+
+<p>This example will load a simple program line by line and then record it. Variable <code>c</code> is used to indicate how many times the LED will blink for, which is 10 in this case.</p>
+<div class="tabGroup" id="tabgroup_3">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_3_py" role="tab" aria-controls="tabpanel_3_py" data-tab="py" tabindex="0" aria-selected="true">Python</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_3_js" role="tab" aria-controls="tabpanel_3_js" data-tab="js" tabindex="-1">JavaScript</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_3_net" role="tab" aria-controls="tabpanel_3_net" data-tab="net" tabindex="-1">.NET</a>
+</li>
+</ul>
+<section id="tabpanel_3_py" role="tabpanel" data-tab="py">
+
+<pre><code class="lang-py">duelink.Script.Load(&quot;c = 10&quot;)
+duelink.Script.Load(&quot;@Blink&quot;)
+duelink.Script.Load(&quot;Led(100,100,c)&quot;)
+duelink.Script.Record()
+</code></pre>
+</section>
+<section id="tabpanel_3_js" role="tabpanel" data-tab="js" aria-hidden="true" hidden="hidden">
+
+<pre><code class="lang-js">await duelink.Script.Load(&quot;c = 10&quot;)
+await duelink.Script.Load(&quot;@Blink&quot;)
+await duelink.Script.Load(&quot;Led(100,100,c)&quot;)
+await duelink.Script.Record()
+</code></pre>
+</section>
+<section id="tabpanel_3_net" role="tabpanel" data-tab="net" aria-hidden="true" hidden="hidden">
+
+<pre><code class="lang-cs">duelink.Script.Load(&quot;c = 10&quot;);
+duelink.Script.Load(&quot;@Blink&quot;);
+duelink.Script.Load(&quot;Led(100,100,c)&quot;);
+duelink.Script.Record();
+</code></pre>
+</section>
+</div>
+
+<p>You can then access a previously recorder program using goto (to label) or by calling a function that has a return. This example calls the recorded program above by executing a single line that contains two commands. The first one sets <code>c</code> to 5 and the second will send execution to <code>@Blink</code>, which will cause the LED to blink 5 times.</p>
+<div class="tabGroup" id="tabgroup_4">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_4_py" role="tab" aria-controls="tabpanel_4_py" data-tab="py" tabindex="0" aria-selected="true">Python</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_4_js" role="tab" aria-controls="tabpanel_4_js" data-tab="js" tabindex="-1">JavaScript</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_4_net" role="tab" aria-controls="tabpanel_4_net" data-tab="net" tabindex="-1">.NET</a>
+</li>
+</ul>
+<section id="tabpanel_4_py" role="tabpanel" data-tab="py">
+
+<pre><code class="lang-py">duelink.Script.Execute(&quot;c=5:goto Blink&quot;)
+</code></pre>
+</section>
+<section id="tabpanel_4_js" role="tabpanel" data-tab="js" aria-hidden="true" hidden="hidden">
+
+<pre><code class="lang-js">await duelink.Script.Execute(&quot;c=5:goto Blink&quot;)
+</code></pre>
+</section>
+<section id="tabpanel_4_net" role="tabpanel" data-tab="net" aria-hidden="true" hidden="hidden">
+
+<pre><code class="lang-cs">duelink.Script.Execute(&quot;c=5:goto Blink&quot;);
+</code></pre>
+</section>
+</div>
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/ghi-electronics/duelink-website/blob/duelink_v1.1.5/software/api/script.md/#L1" class="edit-link">Edit this page</a>
+          <a href="https://github.com/ghi-electronics/duelink-website/blob/dev/software/api/script.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>
