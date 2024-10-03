@@ -8,84 +8,134 @@
 
 </div>
 
-## Hardware Selection
 
-The first step is to pick from one of the many available [DUE Hardware](../hardware/intro.md) options. Which includes the Maker friendly FEZ (Fast & Easy) boards and the STEM educational BrainPad boards.
+## Hardware Setup
 
-If you're just starting out with DUE Link, the BrainPad hardware and its included lessons are recommended.
+Make sure your DUELink hardware is functional using [demo.duelink.com](https://demo.duelink.com/). Check that the board has the latest firmware. Compare the version  shown on the demo page when the device is connected to the version found on the [Downloads](downloads.md) page.
 
+---
 
-Follow the hardware instructions to load the latest DUE Link firmware onto your device.
+## Software Setup
 
-## Start Coding
-
-If using BrainPad, visit its website for full lessons on DUE Link and other hosted languages, like Python and JavaScript.
-
-<div style="text-align: center;">
-
-[![BrainPad Hardware](images/btn-brainpad.png)](../hardware/brainpad.md)
-
-</div>
+DUELink is made for software developers so we are assuming you already have a development machine that is already building Python or JavaScrpt programs for example. See the [Coding Options](coding-options/intro.md) to see the available options and install the available libraries.
 
 ---
 
 ## Blink LED
 
-Assuming you already have hardware and the board is loaded with the latest firmware, We will start by blinking an LED using DUE Script.
+Following one of the available [Coding Options](coding-options/intro.md) will reveal all the needed steps to blink the on-board LED using the LED API, which handles the LED internally inside the DUELink Engine. Here is a similar example but this one uses a loop on the host side to set the LED high and low.
 
-Open the [DUE Console](https://console.duelink.com/)
+# [Python](#tab/py)
 
-![DUE Console](images/due-console.png)
+```py
+from DUELink.DUELinkController import DUELinkController
+import time
 
+availablePort = DUELinkController.GetConnectionPort()
+duelink = DUELinkController(availablePort)
 
-Reset your hardware, or simply unplug it from the PC and then plug it back in. Now, we can connect to the DUE console. To connect click on the Plug button.
-
-![Connect](images/due-connect.png)
-
-A window will now show the available connections. If you have more than one, select the one that has DUE in it and click **Connect**.
-
-![DUE Console](images/console-connect.png)
-
-Note how the “About” panel shows some important info, and may remind you that you do not have the latest firmware.
-
-![DUE Console About](images/console-about.png)
-
-For our blinky program, we do not need to write any code! Just click on Demos ➤ Blink LED.
-
-![DUE Console Demos](images/console-blinkdemo.png)
-
-We can now Record (red button) 
-
-![DUE Record Button](images/due-record.png)
-
-and then Play (Green Button). The LED will now start blinking on your board.
-
-![DUE Play Button](images/due-play.png)
-
-What you just did was write a program in “Recording Mode”. This program lives on the board (gets recorded) and will always be executed on the device on power up, or after reset. Go ahead and Click Stop (Blue button).
-
-![DUE Stop Button](images/due-stop.png)
-
-Go to the immediate window, where it says “Code to Run Immediately…” and enter:
+while True:
+    duelink.Led.Set(1,0,0)
+    time.sleep(0.5)
+    duelink.Led.Set(0,1,0)
+    time.sleep(0.5)
 ```
-Log(“Hello DUE”)
+
+
+# [JavaScript](#tab/js)
+
+```js
+const { SerialUSB } = require("dlserialusb");
+const { DUELinkController } = require("duelink");
+const { Util } = require("duelink");
+
+async function  Blinky() {
+    let duelink = new DUELinkController(new SerialUSB());
+    await duelink.Connect();
+    
+    while (true){
+        await duelink.Led.Set(1, 0, 0)
+        await Util.sleep(500)
+        await duelink.Led.Set(0, 1, 0)
+        await Util.sleep(500)
+    } 
+}
+
+Blinky()
 ```
-![DUE Console Log](images/console-log.png)
-
-And then click the execute button (Right Arrow). This will now show Hello DUE in the Output panel. This line of code was not recorded onto the device and only got executed. More on recorded vs immediate modes in future lessons.
-
-![DUE Console Log](images/console-log-window.png)
+# [.NET](#tab/net)
+```cs
+var availablePort = DUELinkController.GetConnectionPort();
+var duelink = new DUELinkController(availablePort);
+ 
+while (true) {
+	duelink.Led.Set(1, 0, 0);
+	Thread.Sleep(500);
+	duelink.Led.Set(0, 1, 0);
+	Thread.Sleep(500);
+}
+```
+---
 
 ---
 
-## Coding Options
+## Special Pins
 
-![Coding Options](images/coding-options.png)
-The DUE Link ecosystem includes many coding options, starting with DUE Link we have just used. 
+Boards may include on-board features that can be accessed through the API.
+
+Pin "number" | On-board Feature
+--|--
+'a' or 'A' | Button A
+'b' or 'B' | Button B
+'p' or 'P' | Piezo buzzer
+'l' or 'L' | LED
+
+This is an example of how to blink the on-board LED using the [Digital](api/digital.md) class.
+
+# [Python](#tab/py)
+
+```py
+from DUELink.DUELinkController import DUELinkController
+import time
+
+availablePort = DUELinkController.GetConnectionPort()
+duelink = DUELinkController(availablePort)
+
+while True:
+    duelink.Digital.Write('l', 1)
+    time.sleep(0.5)
+    duelink.Digital.Write('l', 0)
+    time.sleep(0.5)
+```
 
 
-<div style="text-align: center;">
+# [JavaScript](#tab/js)
 
-[![Coding Options](/images/btn-coding-options.png)](../software/coding-options/coding-options.md)
+```js
+import {SerialUSB} from './serialusb.js';
+import * as DUELink from './duelink.js';
+import { Util } from "./util.js";
 
-</div>
+let duelink = new DUELink.DUELinkController(new SerialUSB());
+await duelink.Connect();
+
+while (true){
+	await duelink.Digital.Write('l', 1)
+	await Util.sleep(500)
+	await duelink.Digital.Write('l', 0)
+	await Util.sleep(500)
+}
+```
+# [.NET](#tab/net)
+```cs
+var availablePort = DUELinkController.GetConnectionPort();
+var duelink = new DUELinkController(availablePort);
+ 
+while (true) {
+	duelink.Digital.Write('l', 1);
+	Thread.Sleep(500);
+	duelink.Digital.Write('l', 0);
+	Thread.Sleep(500);
+}
+```
+---
